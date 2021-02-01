@@ -1,0 +1,41 @@
+//
+//  PrefixHeader.pch
+//  JYFormHelper
+//
+//  Created by JackYoung on 2021/1/31.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <YYKit/YYKit.h>
+#import <Masonry.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "JYEasyCodeHelper.h"
+#import "JYButton.h"
+#import <BRPickerView.h>
+#import <IQKeyboardManager.h>
+#import <SVProgressHUD.h>
+
+#define kSCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define kSCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
+#define kStatusBarHeight ([UIApplication sharedApplication].statusBarFrame.size.height)
+#define kNavBarHeight 44.0
+
+#define isIPhoneXLaters ([UIScreen mainScreen].bounds.size.height >= 812)
+
+#define IPHONE_X \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+
+#define kTabBarHeight  (isIPhoneXLaters ? 83 : 49)
+#define kBottomInset  (isIPhoneXLaters ? 34 : 0)
+
+#define weakSelf(Self)  __weak __typeof(&*self)weakSelf = self;
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,17 @@
+#source 'http://git.ycteam.work/YCSpecs.git'
+#source 'https://gitee.com/yangwanchen666/ccreateSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+install! 'cocoapods', :disable_input_output_paths => true
+
+platform :ios, '9.0'
+
+target 'JYFormHelper' do
+
+   pod 'Masonry', '1.1.0'
+   pod 'YYKit'
+   pod 'BRPickerView', '2.7.3'
+   pod 'IQKeyboardManager', '6.5.6'
+   pod 'SVProgressHUD'
+   
+end

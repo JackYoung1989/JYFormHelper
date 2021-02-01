@@ -1,0 +1,45 @@
+PODS:
+  - BRPickerView (2.7.3):
+    - BRPickerView/AddressPickerView (= 2.7.3)
+    - BRPickerView/Base (= 2.7.3)
+    - BRPickerView/DatePickerView (= 2.7.3)
+    - BRPickerView/StringPickerView (= 2.7.3)
+  - BRPickerView/AddressPickerView (2.7.3):
+    - BRPickerView/Base
+  - BRPickerView/Base (2.7.3)
+  - BRPickerView/DatePickerView (2.7.3):
+    - BRPickerView/Base
+  - BRPickerView/StringPickerView (2.7.3):
+    - BRPickerView/Base
+  - IQKeyboardManager (6.5.6)
+  - Masonry (1.1.0)
+  - SVProgressHUD (2.2.5)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - BRPickerView (= 2.7.3)
+  - IQKeyboardManager (= 6.5.6)
+  - Masonry (= 1.1.0)
+  - SVProgressHUD
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BRPickerView
+    - IQKeyboardManager
+    - Masonry
+    - SVProgressHUD
+    - YYKit
+
+SPEC CHECKSUMS:
+  BRPickerView: 9cc11880ac79c4872d081ccb88f306224c1501d7
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: fd2472466c3d133727761e0a5714a5ba707d20e0
+
+COCOAPODS: 1.10.0

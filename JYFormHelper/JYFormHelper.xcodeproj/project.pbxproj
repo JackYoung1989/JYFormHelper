@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB6AE1FD186171D0BBADB8DF /* libPods-JYFormHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BA80ED659A0A1BA77C51EC /* libPods-JYFormHelper.a */; };
+		F239B42225C65D1200DBB138 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B42125C65D1200DBB138 /* AppDelegate.m */; };
+		F239B42525C65D1200DBB138 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B42425C65D1200DBB138 /* SceneDelegate.m */; };
+		F239B42825C65D1200DBB138 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B42725C65D1200DBB138 /* ViewController.m */; };
+		F239B42B25C65D1200DBB138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F239B42925C65D1200DBB138 /* Main.storyboard */; };
+		F239B42D25C65D1400DBB138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F239B42C25C65D1400DBB138 /* Assets.xcassets */; };
+		F239B43025C65D1400DBB138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F239B42E25C65D1400DBB138 /* LaunchScreen.storyboard */; };
+		F239B43325C65D1400DBB138 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B43225C65D1400DBB138 /* main.m */; };
+		F239B44325C66D5800DBB138 /* JYFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B43D25C66D5700DBB138 /* JYFormCell.m */; };
+		F239B44425C66D5800DBB138 /* JYFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B43E25C66D5700DBB138 /* JYFormModel.m */; };
+		F239B44525C66D5800DBB138 /* JYFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B44025C66D5700DBB138 /* JYFormViewController.m */; };
+		F239B45B25C67CC200DBB138 /* JYEasyCodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B45A25C67CC200DBB138 /* JYEasyCodeHelper.m */; };
+		F239B45F25C67F2C00DBB138 /* JYFormCell_MultiSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B45D25C67F2C00DBB138 /* JYFormCell_MultiSelect.m */; };
+		F239B46525C67FB000DBB138 /* JYSingWordCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B46425C67FB000DBB138 /* JYSingWordCollectionCell.m */; };
+		F239B46925C6823300DBB138 /* JYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B46725C6823300DBB138 /* JYButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C71ADC05FBB18ED3615307B /* Pods-JYFormHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYFormHelper.debug.xcconfig"; path = "Target Support Files/Pods-JYFormHelper/Pods-JYFormHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		A2CE97A01436F946DD5E616B /* Pods-JYFormHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYFormHelper.release.xcconfig"; path = "Target Support Files/Pods-JYFormHelper/Pods-JYFormHelper.release.xcconfig"; sourceTree = "<group>"; };
+		C4BA80ED659A0A1BA77C51EC /* libPods-JYFormHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JYFormHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F239B41D25C65D1200DBB138 /* JYFormHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYFormHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F239B42025C65D1200DBB138 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F239B42125C65D1200DBB138 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F239B42325C65D1200DBB138 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		F239B42425C65D1200DBB138 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		F239B42625C65D1200DBB138 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F239B42725C65D1200DBB138 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F239B42A25C65D1200DBB138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F239B42C25C65D1400DBB138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F239B42F25C65D1400DBB138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F239B43125C65D1400DBB138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F239B43225C65D1400DBB138 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F239B43D25C66D5700DBB138 /* JYFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYFormCell.m; sourceTree = "<group>"; };
+		F239B43E25C66D5700DBB138 /* JYFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYFormModel.m; sourceTree = "<group>"; };
+		F239B43F25C66D5700DBB138 /* JYFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormViewController.h; sourceTree = "<group>"; };
+		F239B44025C66D5700DBB138 /* JYFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYFormViewController.m; sourceTree = "<group>"; };
+		F239B44125C66D5700DBB138 /* JYFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormCell.h; sourceTree = "<group>"; };
+		F239B44225C66D5700DBB138 /* JYFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormModel.h; sourceTree = "<group>"; };
+		F239B45725C675CD00DBB138 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F239B45925C67CC200DBB138 /* JYEasyCodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYEasyCodeHelper.h; sourceTree = "<group>"; };
+		F239B45A25C67CC200DBB138 /* JYEasyCodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYEasyCodeHelper.m; sourceTree = "<group>"; };
+		F239B45D25C67F2C00DBB138 /* JYFormCell_MultiSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_MultiSelect.m; sourceTree = "<group>"; };
+		F239B45E25C67F2C00DBB138 /* JYFormCell_MultiSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormCell_MultiSelect.h; sourceTree = "<group>"; };
+		F239B46325C67FB000DBB138 /* JYSingWordCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSingWordCollectionCell.h; sourceTree = "<group>"; };
+		F239B46425C67FB000DBB138 /* JYSingWordCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSingWordCollectionCell.m; sourceTree = "<group>"; };
+		F239B46725C6823300DBB138 /* JYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYButton.m; sourceTree = "<group>"; };
+		F239B46825C6823300DBB138 /* JYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYButton.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F239B41A25C65D1200DBB138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB6AE1FD186171D0BBADB8DF /* libPods-JYFormHelper.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DEDBEC3DA0F4D6972A765FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4BA80ED659A0A1BA77C51EC /* libPods-JYFormHelper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B773350A2B6E602DDDA653F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C71ADC05FBB18ED3615307B /* Pods-JYFormHelper.debug.xcconfig */,
+				A2CE97A01436F946DD5E616B /* Pods-JYFormHelper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F239B41425C65D1200DBB138 = {
+			isa = PBXGroup;
+			children = (
+				F239B41F25C65D1200DBB138 /* JYFormHelper */,
+				F239B41E25C65D1200DBB138 /* Products */,
+				B773350A2B6E602DDDA653F2 /* Pods */,
+				2DEDBEC3DA0F4D6972A765FE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F239B41E25C65D1200DBB138 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F239B41D25C65D1200DBB138 /* JYFormHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F239B41F25C65D1200DBB138 /* JYFormHelper */ = {
+			isa = PBXGroup;
+			children = (
+				F239B42025C65D1200DBB138 /* AppDelegate.h */,
+				F239B42125C65D1200DBB138 /* AppDelegate.m */,
+				F239B42325C65D1200DBB138 /* SceneDelegate.h */,
+				F239B42425C65D1200DBB138 /* SceneDelegate.m */,
+				F239B44125C66D5700DBB138 /* JYFormCell.h */,
+				F239B43D25C66D5700DBB138 /* JYFormCell.m */,
+				F239B45E25C67F2C00DBB138 /* JYFormCell_MultiSelect.h */,
+				F239B45D25C67F2C00DBB138 /* JYFormCell_MultiSelect.m */,
+				F239B46325C67FB000DBB138 /* JYSingWordCollectionCell.h */,
+				F239B46425C67FB000DBB138 /* JYSingWordCollectionCell.m */,
+				F239B44225C66D5700DBB138 /* JYFormModel.h */,
+				F239B43E25C66D5700DBB138 /* JYFormModel.m */,
+				F239B43F25C66D5700DBB138 /* JYFormViewController.h */,
+				F239B44025C66D5700DBB138 /* JYFormViewController.m */,
+				F239B42625C65D1200DBB138 /* ViewController.h */,
+				F239B42725C65D1200DBB138 /* ViewController.m */,
+				F239B42925C65D1200DBB138 /* Main.storyboard */,
+				F239B42C25C65D1400DBB138 /* Assets.xcassets */,
+				F239B42E25C65D1400DBB138 /* LaunchScreen.storyboard */,
+				F239B45725C675CD00DBB138 /* PrefixHeader.pch */,
+				F239B45925C67CC200DBB138 /* JYEasyCodeHelper.h */,
+				F239B45A25C67CC200DBB138 /* JYEasyCodeHelper.m */,
+				F239B46825C6823300DBB138 /* JYButton.h */,
+				F239B46725C6823300DBB138 /* JYButton.m */,
+				F239B43125C65D1400DBB138 /* Info.plist */,
+				F239B43225C65D1400DBB138 /* main.m */,
+			);
+			path = JYFormHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F239B41C25C65D1200DBB138 /* JYFormHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F239B43625C65D1400DBB138 /* Build configuration list for PBXNativeTarget "JYFormHelper" */;
+			buildPhases = (
+				AC9610589BE02BDA1B7E0814 /* [CP] Check Pods Manifest.lock */,
+				F239B41925C65D1200DBB138 /* Sources */,
+				F239B41A25C65D1200DBB138 /* Frameworks */,
+				F239B41B25C65D1200DBB138 /* Resources */,
+				0431053529559E760AAFFF0A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JYFormHelper;
+			productName = JYFormHelper;
+			productReference = F239B41D25C65D1200DBB138 /* JYFormHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F239B41525C65D1200DBB138 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					F239B41C25C65D1200DBB138 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = F239B41825C65D1200DBB138 /* Build configuration list for PBXProject "JYFormHelper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F239B41425C65D1200DBB138;
+			productRefGroup = F239B41E25C65D1200DBB138 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F239B41C25C65D1200DBB138 /* JYFormHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F239B41B25C65D1200DBB138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F239B43025C65D1400DBB138 /* LaunchScreen.storyboard in Resources */,
+				F239B42D25C65D1400DBB138 /* Assets.xcassets in Resources */,
+				F239B42B25C65D1200DBB138 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0431053529559E760AAFFF0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JYFormHelper/Pods-JYFormHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC9610589BE02BDA1B7E0814 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JYFormHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F239B41925C65D1200DBB138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F239B44425C66D5800DBB138 /* JYFormModel.m in Sources */,
+				F239B45F25C67F2C00DBB138 /* JYFormCell_MultiSelect.m in Sources */,
+				F239B46525C67FB000DBB138 /* JYSingWordCollectionCell.m in Sources */,
+				F239B46925C6823300DBB138 /* JYButton.m in Sources */,
+				F239B42825C65D1200DBB138 /* ViewController.m in Sources */,
+				F239B42225C65D1200DBB138 /* AppDelegate.m in Sources */,
+				F239B44525C66D5800DBB138 /* JYFormViewController.m in Sources */,
+				F239B43325C65D1400DBB138 /* main.m in Sources */,
+				F239B45B25C67CC200DBB138 /* JYEasyCodeHelper.m in Sources */,
+				F239B42525C65D1200DBB138 /* SceneDelegate.m in Sources */,
+				F239B44325C66D5800DBB138 /* JYFormCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F239B42925C65D1200DBB138 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F239B42A25C65D1200DBB138 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F239B42E25C65D1400DBB138 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F239B42F25C65D1400DBB138 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F239B43425C65D1400DBB138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JYFormHelper/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F239B43525C65D1400DBB138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JYFormHelper/PrefixHeader.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F239B43725C65D1400DBB138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C71ADC05FBB18ED3615307B /* Pods-JYFormHelper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = JYFormHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagull.123.JYFormHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F239B43825C65D1400DBB138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2CE97A01436F946DD5E616B /* Pods-JYFormHelper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = JYFormHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagull.123.JYFormHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F239B41825C65D1200DBB138 /* Build configuration list for PBXProject "JYFormHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F239B43425C65D1400DBB138 /* Debug */,
+				F239B43525C65D1400DBB138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F239B43625C65D1400DBB138 /* Build configuration list for PBXNativeTarget "JYFormHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F239B43725C65D1400DBB138 /* Debug */,
+				F239B43825C65D1400DBB138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F239B41525C65D1200DBB138 /* Project object */;
+}
