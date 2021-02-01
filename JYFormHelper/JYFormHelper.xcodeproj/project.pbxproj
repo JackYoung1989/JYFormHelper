@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BB6AE1FD186171D0BBADB8DF /* libPods-JYFormHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BA80ED659A0A1BA77C51EC /* libPods-JYFormHelper.a */; };
 		F239B42225C65D1200DBB138 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B42125C65D1200DBB138 /* AppDelegate.m */; };
-		F239B42525C65D1200DBB138 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B42425C65D1200DBB138 /* SceneDelegate.m */; };
 		F239B42825C65D1200DBB138 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B42725C65D1200DBB138 /* ViewController.m */; };
 		F239B42B25C65D1200DBB138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F239B42925C65D1200DBB138 /* Main.storyboard */; };
 		F239B42D25C65D1400DBB138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F239B42C25C65D1400DBB138 /* Assets.xcassets */; };
@@ -31,8 +30,6 @@
 		F239B41D25C65D1200DBB138 /* JYFormHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYFormHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F239B42025C65D1200DBB138 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F239B42125C65D1200DBB138 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F239B42325C65D1200DBB138 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		F239B42425C65D1200DBB138 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		F239B42625C65D1200DBB138 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F239B42725C65D1200DBB138 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F239B42A25C65D1200DBB138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,8 +106,6 @@
 			children = (
 				F239B42025C65D1200DBB138 /* AppDelegate.h */,
 				F239B42125C65D1200DBB138 /* AppDelegate.m */,
-				F239B42325C65D1200DBB138 /* SceneDelegate.h */,
-				F239B42425C65D1200DBB138 /* SceneDelegate.m */,
 				F239B44125C66D5700DBB138 /* JYFormCell.h */,
 				F239B43D25C66D5700DBB138 /* JYFormCell.m */,
 				F239B45E25C67F2C00DBB138 /* JYFormCell_MultiSelect.h */,
@@ -257,7 +252,6 @@
 				F239B44525C66D5800DBB138 /* JYFormViewController.m in Sources */,
 				F239B43325C65D1400DBB138 /* main.m in Sources */,
 				F239B45B25C67CC200DBB138 /* JYEasyCodeHelper.m in Sources */,
-				F239B42525C65D1200DBB138 /* SceneDelegate.m in Sources */,
 				F239B44325C66D5800DBB138 /* JYFormCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,13 +403,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = JYFormHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seagull.123.JYFormHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,13 +423,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = JYFormHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seagull.123.JYFormHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
