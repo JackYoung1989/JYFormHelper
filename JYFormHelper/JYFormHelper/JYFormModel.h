@@ -14,6 +14,8 @@ typedef NS_ENUM(NSUInteger, JYFormModelCellStyle) {
     JYFormModelCellStyleShowOnly,//只展示内容
     JYFormModelCellStyleGrayBar,//cell中间的间隔灰条
     JYFormModelCellStyleMultiSelectButton,//多个按钮选择cell
+    JYFormModelCellStyleSectionHeaderTitleLabel,//sectionHeader灰色背景，上面显示标题titleLabel
+
 };
 
 @class JYKeyValueModel;

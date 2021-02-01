@@ -11,6 +11,7 @@
 #import "JYFormCell.h"
 #import "JYFormCell_MultiSelect.h"
 #import "JYFormCell_GrayBar.h"
+#import "JYFormCell_SectionHeaderTitleLabel.h"
 
 //自定义Ai报告
 @interface JYFormViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -43,33 +44,40 @@
 //    model1.style = JYFormModelCellStyleSelectShow;
 //    [self.dataArray addObject:model1];
 //
-//    JYFormModel *model2 = [[JYFormModel alloc] init];
-//    model2.title = @"兴趣爱好";
-//    model2.requestKey = @"";
-//    [self.dataArray addObject:model2];
-//
-//    JYFormModel *model3 = [[JYFormModel alloc] init];
-//    model3.title = @"有啥特长";
-//    model3.requestKey = @"";
-//    [self.dataArray addObject:model3];
-    
-    JYFormModel *model4 = [[JYFormModel alloc] init];
-    model4.title = @"可以输入";
-    model4.requestKey = @"";
-    model4.style = JYFormModelCellStyleInputTextField;
-    model4.inputMaxLength = 5;
-    [self.dataArray addObject:model4];
+    JYFormModel *model2 = [[JYFormModel alloc] init];
+    model2.title = @"学生范围";
+    model2.requestKey = @"";
+    model2.style = JYFormModelCellStyleSelectShow;
+    [self.dataArray addObject:model2];
     
     JYFormModel *model6 = [[JYFormModel alloc] init];
-    model6.style = JYFormModelCellStyleGrayBar;
+    model6.title = @"这是个section";
+    model6.style = JYFormModelCellStyleSectionHeaderTitleLabel;
     [self.dataArray addObject:model6];
     
-    JYFormModel *model5 = [[JYFormModel alloc] init];
-    model5.title = @"表现如何";
-    model5.requestKey = @"";
-    model5.style = JYFormModelCellStyleShowOnly;
-    model5.contentDisplay = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
-    [self.dataArray addObject:model5];
+    JYFormModel *model3 = [[JYFormModel alloc] init];
+    model3.title = @"毕业时间";
+    model3.requestKey = @"";
+    model3.style = JYFormModelCellStyleSelectShow;
+    [self.dataArray addObject:model3];
+    
+//    JYFormModel *model4 = [[JYFormModel alloc] init];
+//    model4.title = @"可以输入";
+//    model4.requestKey = @"";
+//    model4.style = JYFormModelCellStyleInputTextField;
+//    model4.inputMaxLength = 5;
+//    [self.dataArray addObject:model4];
+//
+//    JYFormModel *model6 = [[JYFormModel alloc] init];
+//    model6.style = JYFormModelCellStyleGrayBar;
+//    [self.dataArray addObject:model6];
+//
+//    JYFormModel *model5 = [[JYFormModel alloc] init];
+//    model5.title = @"表现如何";
+//    model5.requestKey = @"";
+//    model5.style = JYFormModelCellStyleShowOnly;
+//    model5.contentDisplay = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
+//    [self.dataArray addObject:model5];
     
     [self createUI];
 }
@@ -95,6 +103,7 @@
     [self.tableView registerClass:[JYFormCell_MultiSelect class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_MultiSelect class])];
     [self.tableView registerClass:[JYFormCell class] forCellReuseIdentifier:NSStringFromClass([JYFormCell class])];
     [self.tableView registerClass:[JYFormCell_GrayBar class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_GrayBar class])];
+    [self.tableView registerClass:[JYFormCell_SectionHeaderTitleLabel class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_SectionHeaderTitleLabel class])];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -154,6 +163,10 @@
         }
         tempModel.childArray = array;
         cell.model = tempModel;
+        return cell;
+    } else if (model.style == JYFormModelCellStyleSectionHeaderTitleLabel) {
+        JYFormCell_SectionHeaderTitleLabel *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell_SectionHeaderTitleLabel class])];
+        cell.model = self.dataArray[indexPath.row];
         return cell;
     } else {
         if ([model.title isEqualToString:@"可以输入"]) {

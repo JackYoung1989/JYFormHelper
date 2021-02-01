@@ -22,6 +22,7 @@
 		F239B46525C67FB000DBB138 /* JYSingWordCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B46425C67FB000DBB138 /* JYSingWordCollectionCell.m */; };
 		F239B46925C6823300DBB138 /* JYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B46725C6823300DBB138 /* JYButton.m */; };
 		F239B4F425C7DE4100DBB138 /* JYFormCell_GrayBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B4F325C7DE4100DBB138 /* JYFormCell_GrayBar.m */; };
+		F239B4F825C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		F239B46825C6823300DBB138 /* JYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYButton.h; sourceTree = "<group>"; };
 		F239B4F225C7DE4000DBB138 /* JYFormCell_GrayBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFormCell_GrayBar.h; sourceTree = "<group>"; };
 		F239B4F325C7DE4100DBB138 /* JYFormCell_GrayBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_GrayBar.m; sourceTree = "<group>"; };
+		F239B4F625C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFormCell_SectionHeaderTitleLabel.h; sourceTree = "<group>"; };
+		F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_SectionHeaderTitleLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				F239B45D25C67F2C00DBB138 /* JYFormCell_MultiSelect.m */,
 				F239B4F225C7DE4000DBB138 /* JYFormCell_GrayBar.h */,
 				F239B4F325C7DE4100DBB138 /* JYFormCell_GrayBar.m */,
+				F239B4F625C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.h */,
+				F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */,
 				F239B46325C67FB000DBB138 /* JYSingWordCollectionCell.h */,
 				F239B46425C67FB000DBB138 /* JYSingWordCollectionCell.m */,
 				F239B44225C66D5700DBB138 /* JYFormModel.h */,
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F239B44425C66D5800DBB138 /* JYFormModel.m in Sources */,
+				F239B4F825C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m in Sources */,
 				F239B45F25C67F2C00DBB138 /* JYFormCell_MultiSelect.m in Sources */,
 				F239B46525C67FB000DBB138 /* JYSingWordCollectionCell.m in Sources */,
 				F239B46925C6823300DBB138 /* JYButton.m in Sources */,
