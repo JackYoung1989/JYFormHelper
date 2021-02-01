@@ -10,6 +10,7 @@
 #import "JYFormModel.h"
 #import "JYFormCell.h"
 #import "JYFormCell_MultiSelect.h"
+#import "JYFormCell_GrayBar.h"
 
 //自定义Ai报告
 @interface JYFormViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -59,12 +60,16 @@
     model4.inputMaxLength = 5;
     [self.dataArray addObject:model4];
     
-//    JYFormModel *model5 = [[JYFormModel alloc] init];
-//    model5.title = @"表现如何";
-//    model5.requestKey = @"";
-//    model5.style = JYFormModelCellStyleShowOnly;
-//    model5.contentDisplay = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
-//    [self.dataArray addObject:model5];
+    JYFormModel *model6 = [[JYFormModel alloc] init];
+    model6.style = JYFormModelCellStyleGrayBar;
+    [self.dataArray addObject:model6];
+    
+    JYFormModel *model5 = [[JYFormModel alloc] init];
+    model5.title = @"表现如何";
+    model5.requestKey = @"";
+    model5.style = JYFormModelCellStyleShowOnly;
+    model5.contentDisplay = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
+    [self.dataArray addObject:model5];
     
     [self createUI];
 }
@@ -89,6 +94,7 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[JYFormCell_MultiSelect class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_MultiSelect class])];
     [self.tableView registerClass:[JYFormCell class] forCellReuseIdentifier:NSStringFromClass([JYFormCell class])];
+    [self.tableView registerClass:[JYFormCell_GrayBar class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_GrayBar class])];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -133,7 +139,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JYFormModel *model = self.dataArray[indexPath.row];
-    if (model.style > 0) {
+    if (model.style == JYFormModelCellStyleGrayBar) {
+        JYFormCell_GrayBar *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell_GrayBar class])];
+        return cell;
+    } else if (model.style == JYFormModelCellStyleMultiSelectButton) {
+        JYFormCell_MultiSelect *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell_MultiSelect class])];
+        JYFormModel *tempModel = [[JYFormModel alloc] init];
+        tempModel.title = @"JackYoung";
+        NSMutableArray *array = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 5; i ++) {
+            JYKeyValueModel *model = [[JYKeyValueModel alloc] init];
+            model.name = [NSString stringWithFormat:@"item%d",i];
+            [array addObject:model];
+        }
+        tempModel.childArray = array;
+        cell.model = tempModel;
+        return cell;
+    } else {
         if ([model.title isEqualToString:@"可以输入"]) {
             JYFormCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell class])];
             cell.model = self.dataArray[indexPath.row];
@@ -148,19 +170,6 @@
             cell.model = self.dataArray[indexPath.row];
             return cell;
         }
-    } else {
-        JYFormCell_MultiSelect *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell_MultiSelect class])];
-        JYFormModel *tempModel = [[JYFormModel alloc] init];
-        tempModel.title = @"JackYoung";
-        NSMutableArray *array = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 5; i ++) {
-            JYKeyValueModel *model = [[JYKeyValueModel alloc] init];
-            model.name = [NSString stringWithFormat:@"item%d",i];
-            [array addObject:model];
-        }
-        tempModel.childArray = array;
-        cell.model = tempModel;
-        return cell;
     }
 }
 

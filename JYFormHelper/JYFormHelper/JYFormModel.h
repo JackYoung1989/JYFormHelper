@@ -12,6 +12,8 @@ typedef NS_ENUM(NSUInteger, JYFormModelCellStyle) {
     JYFormModelCellStyleSelectShow = 10,//请选择>, 内容>
     JYFormModelCellStyleInputTextField,//“请输入”，内容展示
     JYFormModelCellStyleShowOnly,//只展示内容
+    JYFormModelCellStyleGrayBar,//cell中间的间隔灰条
+    JYFormModelCellStyleMultiSelectButton,//多个按钮选择cell
 };
 
 @class JYKeyValueModel;
