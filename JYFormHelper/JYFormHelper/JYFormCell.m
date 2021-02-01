@@ -32,7 +32,15 @@
     return self;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)createUI{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textViewDidChangeValue:)
+                                                 name:UITextFieldTextDidChangeNotification
+                                               object:self.inputTextField];
     
     [self.contentView addSubview:self.titleLabel];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -154,17 +162,25 @@
     UITextRange *selectedRange = [textField markedTextRange];
     UITextPosition *position = [textField positionFromPosition:selectedRange.start offset:0];
     if (!position) { // 没有高亮选择的字
-        if (range.location > self.model.inputMaxLength - 1) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                [SVProgressHUD showSuccessWithStatus:@"JackYoung"];
-//                [SVProgressHUD showSuccessWithStatu:@"JackYoung"];
-                //[NSString stringWithFormat:@"只能输入%ld位字符",self.model.inputMaxLength]];
-            });
+        if ((range.location > self.model.inputMaxLength - 1) && ![string isEqualToString:@""]) {
+            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"只能输入%ld位字符",self.model.inputMaxLength]];
             return NO;
         }
         return true;
     }
     return true;
+}
+
+- (void)textViewDidChangeValue:(NSNotification *)notification {
+    UITextField *textField = (UITextField *)notification.object;
+    UITextRange *selectedRange = [textField markedTextRange];
+    UITextPosition *position = [textField positionFromPosition:selectedRange.start offset:0];
+    if (!position) { //没有高亮选择的字
+        if (textField.text.length > self.model.inputMaxLength) {
+            textField.text = [textField.text substringToIndex:self.model.inputMaxLength];
+            [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat: @"只能输入%ld位字符",self.model.inputMaxLength]];
+        }
+    }
 }
 
 #pragma mark ------------ 懒加载 -------------------------

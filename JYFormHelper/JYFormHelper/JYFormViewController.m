@@ -25,32 +25,32 @@
     self.view.backgroundColor = [UIColor whiteColor];
     _dataArray = [[NSMutableArray alloc] init];
     
-    JYFormModel *model = [[JYFormModel alloc] init];
-    model.title = @"学生范围";
-    model.requestKey = @"";//人或部门ID集合
-    model.isMust = true;
-    model.placeHolder = @"请选择666";
-    model.style = JYFormModelCellStyleSelectShow;
-    [self.dataArray addObject:model];
-    
-    JYFormModel *model1 = [[JYFormModel alloc] init];
-    model1.title = @"毕业时间";
-    model1.requestKey = @"";//查询日期类型 0其他时间段 1日报 2周报 3月报
-    model1.isMust = true;
-    model1.isSelectable = true;
-    model1.placeHolder = @"请选择";
-    model1.style = JYFormModelCellStyleSelectShow;
-    [self.dataArray addObject:model1];
-    
-    JYFormModel *model2 = [[JYFormModel alloc] init];
-    model2.title = @"兴趣爱好";
-    model2.requestKey = @"";
-    [self.dataArray addObject:model2];
-    
-    JYFormModel *model3 = [[JYFormModel alloc] init];
-    model3.title = @"有啥特长";
-    model3.requestKey = @"";
-    [self.dataArray addObject:model3];
+//    JYFormModel *model = [[JYFormModel alloc] init];
+//    model.title = @"学生范围";
+//    model.requestKey = @"";//人或部门ID集合
+//    model.isMust = true;
+//    model.placeHolder = @"请选择666";
+//    model.style = JYFormModelCellStyleSelectShow;
+//    [self.dataArray addObject:model];
+//
+//    JYFormModel *model1 = [[JYFormModel alloc] init];
+//    model1.title = @"毕业时间";
+//    model1.requestKey = @"";//查询日期类型 0其他时间段 1日报 2周报 3月报
+//    model1.isMust = true;
+//    model1.isSelectable = true;
+//    model1.placeHolder = @"请选择";
+//    model1.style = JYFormModelCellStyleSelectShow;
+//    [self.dataArray addObject:model1];
+//
+//    JYFormModel *model2 = [[JYFormModel alloc] init];
+//    model2.title = @"兴趣爱好";
+//    model2.requestKey = @"";
+//    [self.dataArray addObject:model2];
+//
+//    JYFormModel *model3 = [[JYFormModel alloc] init];
+//    model3.title = @"有啥特长";
+//    model3.requestKey = @"";
+//    [self.dataArray addObject:model3];
     
     JYFormModel *model4 = [[JYFormModel alloc] init];
     model4.title = @"可以输入";
@@ -59,12 +59,12 @@
     model4.inputMaxLength = 5;
     [self.dataArray addObject:model4];
     
-    JYFormModel *model5 = [[JYFormModel alloc] init];
-    model5.title = @"表现如何";
-    model5.requestKey = @"";
-    model5.style = JYFormModelCellStyleShowOnly;
-    model5.contentDisplay = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
-    [self.dataArray addObject:model5];
+//    JYFormModel *model5 = [[JYFormModel alloc] init];
+//    model5.title = @"表现如何";
+//    model5.requestKey = @"";
+//    model5.style = JYFormModelCellStyleShowOnly;
+//    model5.contentDisplay = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
+//    [self.dataArray addObject:model5];
     
     [self createUI];
 }
@@ -97,29 +97,29 @@
         make.bottom.offset(-65 - kBottomInset);
     }];
     
-    UIView *bottomBgView = [[UIView alloc] init];
-    [self.view addSubview:bottomBgView];
-    [bottomBgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.offset(0);
-        make.height.offset(65 + kBottomInset);
-        make.bottom.offset(0);
-    }];
+//    UIView *bottomBgView = [[UIView alloc] init];
+//    [self.view addSubview:bottomBgView];
+//    [bottomBgView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.offset(0);
+//        make.height.offset(65 + kBottomInset);
+//        make.bottom.offset(0);
+//    }];
     
-    UIButton *submitButton = [[UIButton alloc] init];
-    submitButton.backgroundColor = [UIColor colorWithHexString:@"#328CFF"];
-    submitButton.layer.cornerRadius = 5;
-    submitButton.clipsToBounds = true;
-    [submitButton setTitle:@"生成报表" forState:UIControlStateNormal];
-    [submitButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    [submitButton.titleLabel setFont:[UIFont systemFontOfSize:17.0]];
-    [submitButton addTarget:self action:@selector(onSubmitButtonTouched) forControlEvents:UIControlEventTouchUpInside];
-    [bottomBgView addSubview:submitButton];
-    [submitButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(16);
-        make.right.offset(-16);
-        make.top.offset(10);
-        make.height.offset(45);
-    }];
+//    UIButton *submitButton = [[UIButton alloc] init];
+//    submitButton.backgroundColor = [UIColor colorWithHexString:@"#328CFF"];
+//    submitButton.layer.cornerRadius = 5;
+//    submitButton.clipsToBounds = true;
+//    [submitButton setTitle:@"生成报表" forState:UIControlStateNormal];
+//    [submitButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+//    [submitButton.titleLabel setFont:[UIFont systemFontOfSize:17.0]];
+//    [submitButton addTarget:self action:@selector(onSubmitButtonTouched) forControlEvents:UIControlEventTouchUpInside];
+//    [bottomBgView addSubview:submitButton];
+//    [submitButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.offset(16);
+//        make.right.offset(-16);
+//        make.top.offset(10);
+//        make.height.offset(45);
+//    }];
 }
 
 - (void)onSubmitButtonTouched {
