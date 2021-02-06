@@ -85,19 +85,19 @@
 
 - (void)setModel:(JYFormModel *)model {
     _model = model;
-    if (model.style == JYFormModelCellStyleSelectShow) {
+    if (model.style == JYFormModelCellStyle_SelectShow) {
         model.isSelectable = true;
         model.isEditable = false;
         self.contentLabel.hidden = true;
         self.contentLabel.text = @"    ";
         self.inputTextField.hidden = false;
-    } else if (model.style == JYFormModelCellStyleInputTextField) {
+    } else if (model.style == JYFormModelCellStyle_InputTextField) {
         model.isSelectable = false;
         model.isEditable = true;
         self.contentLabel.hidden = true;
         self.contentLabel.text = @"    ";
         self.inputTextField.hidden = false;
-    } else if (model.style == JYFormModelCellStyleShowOnly) {
+    } else if (model.style == JYFormModelCellStyle_ShowOnly) {
         model.isSelectable = false;
         model.isEditable = false;
         self.contentLabel.hidden = false;
@@ -118,7 +118,7 @@
         self.inputTextField.placeholder = model.contentString;
     }
     //优先显示contentDisplay，如果没有的话，显示contentString
-    if (model.style == JYFormModelCellStyleShowOnly) {
+    if (model.style == JYFormModelCellStyle_ShowOnly) {
         if (model.contentDisplay != nil && ![model.contentDisplay isEqualToString:@""]) {
             self.contentLabel.text = model.contentDisplay;
         } else if (model.contentString != nil && ![model.contentString isEqualToString:@""]){

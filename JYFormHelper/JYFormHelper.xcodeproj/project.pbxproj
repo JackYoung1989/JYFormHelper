@@ -23,6 +23,7 @@
 		F239B46925C6823300DBB138 /* JYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B46725C6823300DBB138 /* JYButton.m */; };
 		F239B4F425C7DE4100DBB138 /* JYFormCell_GrayBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B4F325C7DE4100DBB138 /* JYFormCell_GrayBar.m */; };
 		F239B4F825C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */; };
+		F239B4FC25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B4FB25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		F239B4F325C7DE4100DBB138 /* JYFormCell_GrayBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_GrayBar.m; sourceTree = "<group>"; };
 		F239B4F625C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFormCell_SectionHeaderTitleLabel.h; sourceTree = "<group>"; };
 		F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_SectionHeaderTitleLabel.m; sourceTree = "<group>"; };
+		F239B4FA25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFormCell_CommentTextViewInput.h; sourceTree = "<group>"; };
+		F239B4FB25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_CommentTextViewInput.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				F239B4F325C7DE4100DBB138 /* JYFormCell_GrayBar.m */,
 				F239B4F625C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.h */,
 				F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */,
+				F239B4FA25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.h */,
+				F239B4FB25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m */,
 				F239B46325C67FB000DBB138 /* JYSingWordCollectionCell.h */,
 				F239B46425C67FB000DBB138 /* JYSingWordCollectionCell.m */,
 				F239B44225C66D5700DBB138 /* JYFormModel.h */,
@@ -261,6 +266,7 @@
 				F239B42825C65D1200DBB138 /* ViewController.m in Sources */,
 				F239B42225C65D1200DBB138 /* AppDelegate.m in Sources */,
 				F239B44525C66D5800DBB138 /* JYFormViewController.m in Sources */,
+				F239B4FC25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m in Sources */,
 				F239B43325C65D1400DBB138 /* main.m in Sources */,
 				F239B4F425C7DE4100DBB138 /* JYFormCell_GrayBar.m in Sources */,
 				F239B45B25C67CC200DBB138 /* JYEasyCodeHelper.m in Sources */,

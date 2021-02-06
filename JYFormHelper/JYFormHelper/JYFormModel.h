@@ -9,13 +9,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, JYFormModelCellStyle) {
-    JYFormModelCellStyleSelectShow = 10,//请选择>, 内容>
-    JYFormModelCellStyleInputTextField,//“请输入”，内容展示
-    JYFormModelCellStyleShowOnly,//只展示内容
-    JYFormModelCellStyleGrayBar,//cell中间的间隔灰条
-    JYFormModelCellStyleMultiSelectButton,//多个按钮选择cell
-    JYFormModelCellStyleSectionHeaderTitleLabel,//sectionHeader灰色背景，上面显示标题titleLabel
-
+    JYFormModelCellStyle_SelectShow = 10,//请选择>, 内容>
+    JYFormModelCellStyle_InputTextField,//“请输入”，内容展示
+    JYFormModelCellStyle_ShowOnly,//只展示内容
+    JYFormModelCellStyle_GrayBar,//cell中间的间隔灰条
+    JYFormModelCellStyle_MultiSelectButton,//多个按钮选择cell
+    JYFormModelCellStyle_SectionHeaderTitleLabel,//sectionHeader灰色背景，上面显示标题titleLabel
+    JYFormModelCellStyle_CommentTextViewInput,//类似于评论一样的textView输入框
 };
 
 @class JYKeyValueModel;
