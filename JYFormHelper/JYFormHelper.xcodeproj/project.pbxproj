@@ -24,6 +24,7 @@
 		F239B4F425C7DE4100DBB138 /* JYFormCell_GrayBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B4F325C7DE4100DBB138 /* JYFormCell_GrayBar.m */; };
 		F239B4F825C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */; };
 		F239B4FC25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B4FB25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m */; };
+		F2752F4225CE2FF5002C1984 /* JYFormCell_PersonSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = F2752F4125CE2FF5002C1984 /* JYFormCell_PersonSelect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_SectionHeaderTitleLabel.m; sourceTree = "<group>"; };
 		F239B4FA25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFormCell_CommentTextViewInput.h; sourceTree = "<group>"; };
 		F239B4FB25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_CommentTextViewInput.m; sourceTree = "<group>"; };
+		F2752F4025CE2FF5002C1984 /* JYFormCell_PersonSelect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFormCell_PersonSelect.h; sourceTree = "<group>"; };
+		F2752F4125CE2FF5002C1984 /* JYFormCell_PersonSelect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_PersonSelect.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				F239B4F725C7E31A00DBB138 /* JYFormCell_SectionHeaderTitleLabel.m */,
 				F239B4FA25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.h */,
 				F239B4FB25C7F19E00DBB138 /* JYFormCell_CommentTextViewInput.m */,
+				F2752F4025CE2FF5002C1984 /* JYFormCell_PersonSelect.h */,
+				F2752F4125CE2FF5002C1984 /* JYFormCell_PersonSelect.m */,
 				F239B46325C67FB000DBB138 /* JYSingWordCollectionCell.h */,
 				F239B46425C67FB000DBB138 /* JYSingWordCollectionCell.m */,
 				F239B44225C66D5700DBB138 /* JYFormModel.h */,
@@ -271,6 +276,7 @@
 				F239B4F425C7DE4100DBB138 /* JYFormCell_GrayBar.m in Sources */,
 				F239B45B25C67CC200DBB138 /* JYEasyCodeHelper.m in Sources */,
 				F239B44325C66D5800DBB138 /* JYFormCell.m in Sources */,
+				F2752F4225CE2FF5002C1984 /* JYFormCell_PersonSelect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
