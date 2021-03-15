@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "JYFormViewController.h"
+#import "JYFormDemoViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = UIColor.redColor;
 
-    JYFormViewController *formViewController = [[JYFormViewController alloc] init];
+    JYFormDemoViewController *formViewController = [[JYFormDemoViewController alloc] init];
     self.window.rootViewController = formViewController;
     [self.window makeKeyAndVisible];
     return YES;
