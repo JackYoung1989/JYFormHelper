@@ -108,6 +108,20 @@
 			isa = PBXGroup;
 			children = (
 				F239B41F25C65D1200DBB138 /* JYFormHelper */,
+				F239B42025C65D1200DBB138 /* AppDelegate.h */,
+				F239B42125C65D1200DBB138 /* AppDelegate.m */,
+				F239B42625C65D1200DBB138 /* ViewController.h */,
+				F239B42725C65D1200DBB138 /* ViewController.m */,
+				F239B42925C65D1200DBB138 /* Main.storyboard */,
+				F239B42C25C65D1400DBB138 /* Assets.xcassets */,
+				F239B42E25C65D1400DBB138 /* LaunchScreen.storyboard */,
+				F239B45725C675CD00DBB138 /* PrefixHeader.pch */,
+				F239B45925C67CC200DBB138 /* JYEasyCodeHelper.h */,
+				F239B45A25C67CC200DBB138 /* JYEasyCodeHelper.m */,
+				F239B46825C6823300DBB138 /* JYButton.h */,
+				F239B46725C6823300DBB138 /* JYButton.m */,
+				F239B43125C65D1400DBB138 /* Info.plist */,
+				F239B43225C65D1400DBB138 /* main.m */,
 				F239B41E25C65D1200DBB138 /* Products */,
 				B773350A2B6E602DDDA653F2 /* Pods */,
 				2DEDBEC3DA0F4D6972A765FE /* Frameworks */,
@@ -125,8 +139,6 @@
 		F239B41F25C65D1200DBB138 /* JYFormHelper */ = {
 			isa = PBXGroup;
 			children = (
-				F239B42025C65D1200DBB138 /* AppDelegate.h */,
-				F239B42125C65D1200DBB138 /* AppDelegate.m */,
 				F239B44125C66D5700DBB138 /* JYFormCell.h */,
 				F239B43D25C66D5700DBB138 /* JYFormCell.m */,
 				F239B45E25C67F2C00DBB138 /* JYFormCell_MultiSelect.h */,
@@ -151,18 +163,6 @@
 				F2752F5525CE3DEA002C1984 /* JYFileModel.m */,
 				F239B43F25C66D5700DBB138 /* JYFormViewController.h */,
 				F239B44025C66D5700DBB138 /* JYFormViewController.m */,
-				F239B42625C65D1200DBB138 /* ViewController.h */,
-				F239B42725C65D1200DBB138 /* ViewController.m */,
-				F239B42925C65D1200DBB138 /* Main.storyboard */,
-				F239B42C25C65D1400DBB138 /* Assets.xcassets */,
-				F239B42E25C65D1400DBB138 /* LaunchScreen.storyboard */,
-				F239B45725C675CD00DBB138 /* PrefixHeader.pch */,
-				F239B45925C67CC200DBB138 /* JYEasyCodeHelper.h */,
-				F239B45A25C67CC200DBB138 /* JYEasyCodeHelper.m */,
-				F239B46825C6823300DBB138 /* JYButton.h */,
-				F239B46725C6823300DBB138 /* JYButton.m */,
-				F239B43125C65D1400DBB138 /* Info.plist */,
-				F239B43225C65D1400DBB138 /* main.m */,
 			);
 			path = JYFormHelper;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = JYFormHelper/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -421,7 +421,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = JYFormHelper/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -444,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = JYFormHelper/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,7 +464,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = JYFormHelper/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
