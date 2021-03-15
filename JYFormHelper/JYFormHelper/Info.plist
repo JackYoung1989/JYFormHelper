@@ -43,5 +43,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请点击”好”以允许访问.若不允许,你将无法使用在提交审批、设置个人和企业头像以及发表个人意见时上传本地图片。</string>
 </dict>
 </plist>

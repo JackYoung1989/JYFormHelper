@@ -13,6 +13,7 @@
 #import "JYFormCell_GrayBar.h"
 #import "JYFormCell_SectionHeaderTitleLabel.h"
 #import "JYFormCell_CommentTextViewInput.h"
+#import "JYFormCell_SelectImageCell.h"
 
 //自定义Ai报告
 @interface JYFormViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -91,6 +92,13 @@
     model8.inputMaxLength = 5;
     [self.dataArray addObject:model8];
     
+    JYFormModel *model10 = [[JYFormModel alloc] init];
+    model10.title = @"描述";
+    model10.requestKey = @"";
+    model10.style = JYFormModelCellStyle_ImageSelect;
+    model10.inputMaxLength = 5;
+    [self.dataArray addObject:model10];
+    
     [self createUI];
 }
 
@@ -117,6 +125,8 @@
     [self.tableView registerClass:[JYFormCell_GrayBar class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_GrayBar class])];
     [self.tableView registerClass:[JYFormCell_SectionHeaderTitleLabel class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_SectionHeaderTitleLabel class])];
     [self.tableView registerClass:[JYFormCell_CommentTextViewInput class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_CommentTextViewInput class])];
+    [self.tableView registerClass:[JYFormCell_SelectImageCell class] forCellReuseIdentifier:NSStringFromClass([JYFormCell_SelectImageCell class])];
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -184,6 +194,10 @@
     } else if (model.style == JYFormModelCellStyle_CommentTextViewInput) {
         JYFormCell_CommentTextViewInput *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell_CommentTextViewInput class])];
         cell.model = self.dataArray[indexPath.row];
+        return cell;
+    } else if (model.style == JYFormModelCellStyle_ImageSelect) {
+        JYFormCell_SelectImageCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell_SelectImageCell class])];
+//        cell.model = self.dataArray[indexPath.row];
         return cell;
     } else {
         if ([model.title isEqualToString:@"可以输入"]) {

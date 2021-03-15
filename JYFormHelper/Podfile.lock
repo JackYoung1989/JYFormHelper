@@ -13,7 +13,11 @@ PODS:
     - BRPickerView/Base
   - IQKeyboardManager (6.5.6)
   - Masonry (1.1.0)
+  - SDWebImage (5.3.1):
+    - SDWebImage/Core (= 5.3.1)
+  - SDWebImage/Core (5.3.1)
   - SVProgressHUD (2.2.5)
+  - TZImagePickerController (3.5.8)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -22,7 +26,9 @@ DEPENDENCIES:
   - BRPickerView (= 2.7.3)
   - IQKeyboardManager (= 6.5.6)
   - Masonry (= 1.1.0)
+  - SDWebImage (= 5.3.1)
   - SVProgressHUD
+  - TZImagePickerController
   - YYKit
 
 SPEC REPOS:
@@ -30,16 +36,20 @@ SPEC REPOS:
     - BRPickerView
     - IQKeyboardManager
     - Masonry
+    - SDWebImage
     - SVProgressHUD
+    - TZImagePickerController
     - YYKit
 
 SPEC CHECKSUMS:
   BRPickerView: 9cc11880ac79c4872d081ccb88f306224c1501d7
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: 7137d57385fb632129838c1e6ab9528a22c666cc
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TZImagePickerController: 7fd9702897ef8c0b7c951e5463f4bcf398296f9e
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: fd2472466c3d133727761e0a5714a5ba707d20e0
+PODFILE CHECKSUM: 8f9dafcba1b6b34902f059d8775c656802d19a57
 
 COCOAPODS: 1.10.0

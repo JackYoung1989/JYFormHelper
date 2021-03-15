@@ -17,6 +17,8 @@
 #import <BRPickerView.h>
 #import <IQKeyboardManager.h>
 #import <SVProgressHUD.h>
+#import <SDWebImage.h>
+#import <TZImagePickerController.h>
 
 #define kSCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define kSCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -35,6 +37,10 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 #define kTabBarHeight  (isIPhoneXLaters ? 83 : 49)
 #define kBottomInset  (isIPhoneXLaters ? 34 : 0)
+
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ||[[str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0 ? YES : NO || [str isEqual:[NSNull null]] || [str isEqualToString:@"(null)"] || [str isEqualToString:@"<null>"])
+
+#define AvatorPlaceHolderImge  ([UIImage imageNamed:@"rightArrow"])
 
 #define weakSelf(Self)  __weak __typeof(&*self)weakSelf = self;
 
