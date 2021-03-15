@@ -291,12 +291,12 @@
 			isa = PBXGroup;
 			children = (
 				F2FEB22225FEFA38002F5B5B /* JYFormCell_SelectPerson.h */,
-				F2FEB22325FEFA38002F5B5B /* JYFormCell_SelectPersonModel.h */,
-				F2FEB22425FEFA38002F5B5B /* JYFormCell_SelectPersonInnerCell.h */,
 				F2FEB22525FEFA38002F5B5B /* JYFormCell_SelectPerson.m */,
+				F2FEB22325FEFA38002F5B5B /* JYFormCell_SelectPersonModel.h */,
 				F2FEB22625FEFA38002F5B5B /* JYFormCell_SelectPersonModel.m */,
-				F2FEB22725FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode */,
+				F2FEB22425FEFA38002F5B5B /* JYFormCell_SelectPersonInnerCell.h */,
 				F2FEB22C25FEFA38002F5B5B /* JYFormCell_SelectPersonInnerCell.m */,
+				F2FEB22725FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode */,
 			);
 			path = JYFormCell_SelectPerson;
 			sourceTree = "<group>";
@@ -304,10 +304,10 @@
 		F2FEB22725FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode */ = {
 			isa = PBXGroup;
 			children = (
-				F2FEB22825FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode.m */,
-				F2FEB22925FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode_InnerCell.m */,
 				F2FEB22A25FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode.h */,
+				F2FEB22825FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode.m */,
 				F2FEB22B25FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode_InnerCell.h */,
+				F2FEB22925FEFA38002F5B5B /* JYFormCell_SelectPersonDetailShowMode_InnerCell.m */,
 			);
 			path = JYFormCell_SelectPersonDetailShowMode;
 			sourceTree = "<group>";
@@ -315,10 +315,10 @@
 		F2FEB23525FEFA38002F5B5B /* JYFormCell_SelectImage */ = {
 			isa = PBXGroup;
 			children = (
-				F2FEB23625FEFA38002F5B5B /* JYFormCell_SelectImageInnerCell.h */,
-				F2FEB23725FEFA38002F5B5B /* JYFormCell_SelectImageCell.h */,
-				F2FEB23825FEFA38002F5B5B /* JYFormCell_SelectImageInnerCell.m */,
 				F2FEB23925FEFA38002F5B5B /* JYFormCell_SelectImageCell.m */,
+				F2FEB23725FEFA38002F5B5B /* JYFormCell_SelectImageCell.h */,
+				F2FEB23625FEFA38002F5B5B /* JYFormCell_SelectImageInnerCell.h */,
+				F2FEB23825FEFA38002F5B5B /* JYFormCell_SelectImageInnerCell.m */,
 			);
 			path = JYFormCell_SelectImage;
 			sourceTree = "<group>";

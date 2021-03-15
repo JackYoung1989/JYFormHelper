@@ -21,7 +21,8 @@
     self.window.backgroundColor = UIColor.redColor;
 
     JYFormDemoViewController *formViewController = [[JYFormDemoViewController alloc] init];
-    self.window.rootViewController = formViewController;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:formViewController];
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }
