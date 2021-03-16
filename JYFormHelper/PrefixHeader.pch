@@ -21,6 +21,7 @@
 #import <TZImagePickerController.h>
 #import <BRPickerView.h>
 #import "NSString+Additions.h"
+#import "JYPersonModel.h"
 
 #define kSCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define kSCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
