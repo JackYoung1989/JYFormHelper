@@ -39,7 +39,9 @@
         weakSelf.model.contentString = textView.text;
     }];
     [self.textView addTextLengthDidMaxHandler:^(FSTextView *textView) {
-        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"最多输入%ld个字符",weakSelf.model.inputMaxLength]];
+        if (weakSelf.model.inputMaxLength != 0) {
+            [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"最多输入%ld个字符",weakSelf.model.inputMaxLength]];
+        }
     }];
     [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.offset(11);

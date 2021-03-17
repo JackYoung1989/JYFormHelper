@@ -10,8 +10,12 @@
 #import "JYFormModel.h"
 #import "JYKeyValueModel.h"
 #import "BRDatePickerView.h"
+#import "JYFormCell_LabelSwitch.h"
+#import "JYTestModel.h"
 
 @interface JYFormDemoViewController ()
+
+@property (nonatomic, strong)JYTestModel *netModel;
 
 @end
 
@@ -20,10 +24,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"创建";
+    
+    self.netModel = [[JYTestModel alloc] init];
+    self.netModel.startDefaultTime = @"2020-10-10";
+    self.netModel.inputDefaultText = @"JackYoung";
+    self.netModel.showOnlyText = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
+    self.netModel.describeString = @"描述内容123";
+    self.netModel.defaultPersonArray = @[];
+    self.netModel.defaultImageArray = @[];
+    self.netModel.defaultFileArray = @[];
+    
     [self configFormView];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
     [self.tableView reloadData];
 }
 
@@ -65,11 +80,12 @@
     JYKeyValueModel *keyValueModel = [[JYKeyValueModel alloc] init];
     keyValueModel.name = @"on";
     keyValueModel.itemId = @"1";
-    keyValueModel.isSelected = true;
+    keyValueModel.isSelected = false;
     [switchDataArray addObject:keyValueModel];
     JYKeyValueModel *keyValueModel1 = [[JYKeyValueModel alloc] init];
     keyValueModel1.name = @"off";
     keyValueModel1.itemId = @"0";
+    keyValueModel1.isSelected = true;
     [switchDataArray addObject:keyValueModel1];
     model3.optionArray = switchDataArray;
     
@@ -77,6 +93,7 @@
     
     JYFormModel *model4 = [[JYFormModel alloc] init];
     model4.style = JYFormModelCellStyle_GrayBar;
+    model4.title = @"grayBar_push_nextOne";
     [self.dataArray addObject:model4];
     
     JYFormModel *model5 = [[JYFormModel alloc] init];
@@ -117,6 +134,9 @@
     
     JYFormModel *model71 = [[JYFormModel alloc] init];
     model71.title = @"开始时间";
+    if (self.netModel && [JYEasyCodeHelper isNotEmpty:self.netModel.startDefaultTime]) {
+        model71.contentString = self.netModel.startDefaultTime;
+    }
     model71.requestKey = @"";
     model71.style = JYFormModelCellStyle_SelectShow;
     [self.dataArray addObject:model71];
@@ -125,6 +145,9 @@
     model8.title = @"可以输入";
     model8.requestKey = @"";
     model8.placeHolder = @"Jack is a good boy";
+    if (self.netModel && [JYEasyCodeHelper isNotEmpty:self.netModel.inputDefaultText]) {
+        model8.contentString = self.netModel.inputDefaultText;
+    }
     model8.style = JYFormModelCellStyle_InputTextField;
     model8.inputMaxLength = 5;
     [self.dataArray addObject:model8];
@@ -137,7 +160,9 @@
     model10.title = @"表现如何";
     model10.requestKey = @"";
     model10.style = JYFormModelCellStyle_ShowOnly;
-    model10.contentDisplay = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
+    if (self.netModel && [JYEasyCodeHelper isNotEmpty:self.netModel.showOnlyText]) {
+        model10.contentDisplay = self.netModel.showOnlyText;
+    }
     [self.dataArray addObject:model10];
     
     JYFormModel *model11 = [[JYFormModel alloc] init];
@@ -148,6 +173,9 @@
     model12.title = @"描述";
     model12.placeHolder = @"JackYoung请输入描述";
     model12.requestKey = @"";
+    if (self.netModel && [JYEasyCodeHelper isNotEmpty:self.netModel.describeString]) {
+        model12.contentDisplay = self.netModel.describeString;
+    }
     model12.style = JYFormModelCellStyle_CommentTextViewInput;
     model12.inputMaxLength = 5;
     [self.dataArray addObject:model12];
@@ -188,6 +216,37 @@
     JYFormModel *model19 = [[JYFormModel alloc] init];
     model19.style = JYFormModelCellStyle_GrayBar;
     [self.dataArray addObject:model19];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    JYFormModel *model = self.dataArray[indexPath.row];
+    if (model.style == JYFormModelCellStyle_LabelSwitch) {
+        JYFormCell_LabelSwitch *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell_LabelSwitch class])];
+        cell.model = self.dataArray[indexPath.row];
+        cell.isSwitchOnBlock = ^(BOOL isOn, UISwitch * _Nonnull mySwitch) {
+            if (isOn) {//switch选中了
+                
+                JYFormModel *model89 = [[JYFormModel alloc] init];
+                model89.title = @"消息内容";
+                model89.isMust = true;
+                model89.requestKey = @"msg";
+                if (self.netModel && [JYEasyCodeHelper isNotEmpty:self.netModel.describeString]) {
+                    model89.contentString = self.netModel.describeString;
+                    model89.contentDisplay = self.netModel.describeString;
+                }
+                model89.placeHolder = @"请输入消息内容2323";
+                model89.style = JYFormModelCellStyle_CommentTextViewInput;
+                [JYFormModel insertModel:model89 afterTitle:@"grayBar_push_nextOne" inArray:self.dataArray];
+                [self.tableView reloadData];
+            } else {
+                [JYFormModel deleteModelWithTitle:@"消息内容" inArray:self.dataArray];
+                [self.tableView reloadData];
+            }
+        };
+        return cell;
+    } else {
+        return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
 }
 
 //重写点击之后选择，因为涉及的情况比较多，在这里进行处理。

@@ -30,7 +30,7 @@
             make.bottom.offset(0);
         }];
         self.addView.backgroundColor = [UIColor whiteColor];
-        self.addView.image = [UIImage imageNamed:@"add_image_60_60"];
+        self.addView.image = [UIImage imageNamed:@"addImage"];
     }
     return self;
 }

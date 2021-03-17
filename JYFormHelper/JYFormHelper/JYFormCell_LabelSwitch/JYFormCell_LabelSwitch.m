@@ -44,8 +44,7 @@
         model.isSelected = false;
         
         //选中状态
-        if (mySwitch.isOn) {
-            model.name = @"on";
+        if (mySwitch.isOn && [model.name isEqualToString:@"on"]) {
             model.isSelected = true;
             if (self.isSwitchOnBlock) {
                 self.isSwitchOnBlock(true, mySwitch);
@@ -53,8 +52,7 @@
         }
         
         //非选中状态
-        if (!mySwitch.isOn) {
-            model.name = @"off";
+        if (!mySwitch.isOn && [model.name isEqualToString:@"off"]) {
             self.model.contentString = model.itemId;
             model.isSelected = true;
             if (self.isSwitchOnBlock) {
