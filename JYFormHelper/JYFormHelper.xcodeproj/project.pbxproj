@@ -242,12 +242,12 @@
 			isa = PBXGroup;
 			children = (
 				F231168E26004E25009A1541 /* JYFormCell_SelectPerson.h */,
-				F231168F26004E25009A1541 /* JYFormCell_SelectPersonModel.h */,
-				F231169026004E25009A1541 /* JYFormCell_SelectPersonInnerCell.h */,
 				F231169126004E25009A1541 /* JYFormCell_SelectPerson.m */,
+				F231168F26004E25009A1541 /* JYFormCell_SelectPersonModel.h */,
 				F231169226004E25009A1541 /* JYFormCell_SelectPersonModel.m */,
-				F231169326004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode */,
+				F231169026004E25009A1541 /* JYFormCell_SelectPersonInnerCell.h */,
 				F231169826004E25009A1541 /* JYFormCell_SelectPersonInnerCell.m */,
+				F231169326004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode */,
 			);
 			path = JYFormCell_SelectPerson;
 			sourceTree = "<group>";
