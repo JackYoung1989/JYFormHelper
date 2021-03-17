@@ -14,6 +14,7 @@
 @interface JYFormCell_SelectFile()<UITableViewDelegate,UITableViewDataSource,UIDocumentPickerDelegate>
 
 @property (nonatomic, strong)UITableView *tableView;
+@property (nonatomic, assign) BOOL isSetDraftFileOrImage; //是否设置过草稿中的附加或者图片
 
 @end
 
@@ -45,8 +46,8 @@
 
 - (void)setModel:(JYFormModel *)model {
     [super setModel:model];
-    if (self.model.fileOrImageArray.count > 0 && !self.model.isSetDraftFileOrImage) {
-        self.model.isSetDraftFileOrImage = true;
+    if (self.model.fileOrImageArray.count > 0 && !self.isSetDraftFileOrImage) {
+        self.isSetDraftFileOrImage = true;
         self.fileArray = self.model.fileOrImageArray.mutableCopy;
         
         //将默认的数据转成childArray，用于以后编辑

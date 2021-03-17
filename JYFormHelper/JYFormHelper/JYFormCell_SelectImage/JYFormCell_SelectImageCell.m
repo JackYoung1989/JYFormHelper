@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIView *bgView;
+@property (nonatomic, assign) BOOL isSetDraftFileOrImage; //是否设置过草稿中的附加或者图片
 
 @end
 
@@ -44,8 +45,8 @@
 
 - (void)setModel:(JYFormModel *)model {
     [super setModel:model];
-    if (self.model.fileOrImageArray.count > 0 && !self.model.isSetDraftFileOrImage) {
-        self.model.isSetDraftFileOrImage = true;
+    if (self.model.fileOrImageArray.count > 0 && !self.isSetDraftFileOrImage) {
+        self.isSetDraftFileOrImage = true;
         self.imageArray = self.model.fileOrImageArray.mutableCopy;
     }
     

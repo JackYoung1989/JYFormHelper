@@ -71,7 +71,6 @@ typedef NS_ENUM(NSUInteger, JYFormModelCellSelectPersonStyle) {
 @property (nonatomic, strong)NSArray <JYKeyValueModel *>*optionArray;//可选内容的数组，用于选择控件
 @property (nonatomic, strong)NSArray *multilineArray;//可选内容的数组，用于选择控件
 @property (nonatomic, strong)NSArray <JYSelectDepartmentModel *>*departmentArray;//部门
-@property (nonatomic, assign) BOOL isSetDraftFileOrImage; //是否设置过草稿中的附加或者图片
 @property (nonatomic, strong)NSArray <JYFileModel *>*fileOrImageArray;//拉取草稿得到的附件或图片数组
 @property (nonatomic, assign)JYFormModelCellStyle style;//cell的样式
 @property (nonatomic, assign)NSInteger inputMaxLength;//最大输入限制
