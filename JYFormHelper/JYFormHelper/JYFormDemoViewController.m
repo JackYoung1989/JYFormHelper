@@ -31,8 +31,8 @@
     self.netModel.showOnlyText = @"JackYoung is a good boy!!!\n  JackYoung is a good boy!!!\n JackYoung is a good boy!!!你好，我是杨杰";
     self.netModel.describeString = @"描述内容123";
     self.netModel.defaultPersonArray = @[];
-    self.netModel.defaultImageArray = @[];
-    self.netModel.defaultFileArray = @[];
+    self.netModel.defaultImageArray = [NSArray modelArrayWithClass:[JYFileModel class] json:@"[  {    \"relativePath\" : null,    \"absolutePath\" : \"http:\\/\\/www.weifang.gov.cn\\/wqt-oss\\/ccreate-approve-b\\/3bfa15b582b9485fa9cd0ca06ad38260.jpg\",    \"fileSize\" : 231154,    \"fileType\" : \"jpg\",    \"newFileName\" : null,    \"originalFileName\" : \"(null).jpg\"  },  {    \"relativePath\" : null,    \"absolutePath\" : \"http:\\/\\/www.weifang.gov.cn\\/wqt-oss\\/ccreate-approve-b\\/32b5dddb673c421fa52fb10cda08e49a.jpg\",    \"fileSize\" : 382108,    \"fileType\" : \"jpg\",    \"newFileName\" : null,    \"originalFileName\" : \"(null).jpg\"  }]"];
+    self.netModel.defaultFileArray = [NSArray modelArrayWithClass:[JYFileModel class] json:@"[  {    \"relativePath\" : null,    \"absolutePath\" : \"http:\\/\\/www.weifang.gov.cn\\/wqt-oss\\/ccreate-approve-b\\/01d3bce62be649c1b5444804d1ee152e.PNG\",    \"fileSize\" : 227737,    \"fileType\" : \"PNG\",    \"newFileName\" : null,    \"originalFileName\" : \"simulator_screenshot_EFC1D825-05A6-4C0A-B7C6-97870510EB58.PNG\"  }]"];;
     
     [self configFormView];
     
@@ -188,6 +188,18 @@
     model14.title = @"执行人";
     model14.isMust = true;
     model14.requestKey = @"";
+    NSMutableArray *records = [NSMutableArray arrayWithCapacity:1];
+    for (int i = 0; i < 2; i ++) {
+        JYKeyValueModel *keyValuemodel = [[JYKeyValueModel alloc] init];
+        keyValuemodel.name = @"杨杰";
+        keyValuemodel.itemId = @"123";
+        keyValuemodel.imageUrl = @"";
+        [records addObject:keyValuemodel];
+    }
+    if (records.count > 0) {
+        model14.childArray = [records copy];
+    }
+    
     model14.style = JYFormModelCellStyle_PersonSelect;
     [self.dataArray addObject:model14];
     
@@ -198,6 +210,10 @@
     JYFormModel *model16 = [[JYFormModel alloc] init];
     model16.title = @"图片选择6";
     model16.requestKey = @"";
+    if (self.netModel && [JYEasyCodeHelper isNotEmpty:self.netModel.defaultImageArray]) {
+        model16.fileOrImageArray = self.netModel.defaultImageArray;
+    }
+    
     model16.style = JYFormModelCellStyle_ImageSelect;
     [self.dataArray addObject:model16];
     
@@ -209,6 +225,9 @@
     model18.title = @"文件选择";
     model18.isMust = true;
     model18.requestKey = @"";
+    if (self.netModel && [JYEasyCodeHelper isNotEmpty:self.netModel.defaultFileArray]) {
+        model18.fileOrImageArray = self.netModel.defaultFileArray;
+    }
     model18.style = JYFormModelCellStyle_FileSelect;
     model18.inputMaxLength = 5;
     [self.dataArray addObject:model18];

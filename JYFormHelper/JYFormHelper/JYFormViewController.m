@@ -296,17 +296,7 @@
                     }
                 }
             }
-        }
-        else if (model.style == JYFormModelCellStyle_Multiline_Information) {
-           if (model.multilineArray.count > 0) {
-               if (model.requestKey && ![model.requestKey isEqualToString:@""]) {
-                   [params setValue:model.multilineArray forKey:model.requestKey];
-               } else {
-                   [params setValue:model.multilineArray forKey:model.title];
-               }
-           }
-       }
-        else {
+        } else {
             if (model.requestKey && ![model.requestKey isEqualToString:@""]) {
                 [params setValue:model.contentString forKey:model.requestKey];
             } else {
@@ -430,18 +420,6 @@
             [weakSelf.tableView reloadData];
         };
         cell.model = self.dataArray[indexPath.row];
-        return cell;
-    } else if (model.style == JYFormModelCellStyle_Multiline_Information) {
-        JYFormCellMultiLineInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCellMultiLineInformationCell class])];
-        weakSelf(self);
-        cell.model = self.dataArray[indexPath.row];
-        cell.deleteBtnClickBlock = ^(JYFormModel * _Nonnull model) {
-            [self.dataArray removeObject:model];
-            if (self.multiLineDeleteBtnClick) {
-                self.multiLineDeleteBtnClick();
-            }
-            [self.tableView reloadData];
-        };
         return cell;
     } else if (model.style == JYFormModelCellStyle_SelectShowWithImage) {
         JYFormCell_SelectShowWithImageCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JYFormCell_SelectShowWithImageCell class])];

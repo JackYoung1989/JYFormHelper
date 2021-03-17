@@ -69,8 +69,7 @@
         self.subTitleLabel.hidden = true;
         self.subTitleLabel.text = @"";
         [self.subTitleLabelBottomConstraint uninstall];
-    }
-    else {
+    } else {
         self.subTitleLabel.hidden = false;
         self.subTitleLabel.text = self.model.subTitleString;
     }

@@ -40,7 +40,6 @@ typedef NS_ENUM(NSUInteger, JYFormModelCellStyle) {
      */
     JYFormModelCellStyle_GrayBarWithTitle,//cell默认灰色文字 灰色背景 不带线 有属性可以改值
     
-    JYFormModelCellStyle_Multiline_Information,//一组多行输入信息cell 带删除
     JYFormModelCellStyle_SelectShowWithImage,//图片> 选择样式 右边是图片
 };
 
