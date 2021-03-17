@@ -70,26 +70,13 @@
     }
     self.textView.maxLength = model.inputMaxLength;
     
-    if (model.isHaveSubTitle) {
-        [self.subTitleLabelBottomConstraint uninstall];
-        [self.textView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.offset(11);
-            make.top.equalTo(self.subTitleLabel.mas_bottom).offset(0);
-            make.right.offset(-16);
-            make.height.offset(90);
-            make.bottom.offset(-17);
-        }];
-    }
-    else {
-        [self.subTitleLabelBottomConstraint uninstall];
-        [self.textView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.offset(11);
-            make.top.equalTo(self.titleLabel.mas_bottom).offset(0);
-            make.right.offset(-16);
-            make.height.offset(90);
-            make.bottom.offset(-17);
-        }];
-    }
+    [self.textView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(11);
+        make.top.equalTo(self.titleLabel.mas_bottom).offset(0);
+        make.right.offset(-16);
+        make.height.offset(90);
+        make.bottom.offset(-17);
+    }];
 }
 
 - (UITextView *)textView {

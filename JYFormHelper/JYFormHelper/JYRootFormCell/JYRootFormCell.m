@@ -36,15 +36,6 @@
         make.width.offset(10);
         make.height.offset(16);
     }];
-    
-    [self.contentView addSubview:self.subTitleLabel];
-    [self.subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.titleLabel.mas_bottom).offset(5);
-        make.left.equalTo(self.titleLabel);
-        self.subTitleLabelBottomConstraint = make.bottom.mas_equalTo(-12);
-    }];
-    [self.subTitleLabelBottomConstraint uninstall];
-    self.subTitleLabel.hidden = true;
 }
 
 - (void)setModel:(JYFormModel *)model {
@@ -64,17 +55,6 @@
     } else {
         self.titleLabel.textColor = [UIColor colorWithHexString:@"#202224"];
     }
-    
-    if (!self.model.isHaveSubTitle) {
-        self.subTitleLabel.hidden = true;
-        self.subTitleLabel.text = @"";
-        [self.subTitleLabelBottomConstraint uninstall];
-    } else {
-        self.subTitleLabel.hidden = false;
-        self.subTitleLabel.text = self.model.subTitleString;
-    }
-    
-    self.titleLabel.hidden = self.model.isHiddenTitle;
     
     [self.titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.offset([self.titleLabel.text widthForFont:self.titleLabel.font] + 1);
@@ -99,17 +79,6 @@
         _titleLabel.font = [UIFont systemFontOfSize:16];
     }
     return _titleLabel;
-}
-
-- (UILabel *)subTitleLabel
-{
-    if (_subTitleLabel == nil) {
-        _subTitleLabel = [[UILabel alloc] init];
-        _subTitleLabel.text = @"";
-        _subTitleLabel.textColor = [UIColor colorWithHexString:@"#999999"];
-        _subTitleLabel.font = [UIFont systemFontOfSize:16];
-    }
-    return _subTitleLabel;
 }
 
 @end

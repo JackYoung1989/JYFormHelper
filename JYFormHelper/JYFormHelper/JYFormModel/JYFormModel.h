@@ -60,9 +60,6 @@ typedef NS_ENUM(NSUInteger, JYFormModelCellSelectPersonStyle) {
 @property (nonatomic, assign)BOOL isBottomLineHidden;//底部灰线隐藏
 @property (nonatomic, assign)BOOL isHiddenCell;//是否隐藏cell 实际上是高度改为0
 @property (nonatomic, assign)BOOL isMust;//是不是必填项
-@property (nonatomic, assign)BOOL isHiddenTitle;//是否隐藏标题 默认不隐藏
-@property (nonatomic, assign)BOOL isHaveSubTitle;//是否有副标题 默认没有
-@property (nonatomic, copy)NSString *subTitleString;//副标题名称
 @property (nonatomic, copy)NSString *placeHolder;//当不是可选择状态，即，输入状态的时候才有用。
 @property (nonatomic, copy)NSString *contentDisplay;//内容，用于展示内容，仅仅是显示
 @property (nonatomic, copy)NSString *contentString;//内容，发送给后台的内容

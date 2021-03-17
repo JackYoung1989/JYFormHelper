@@ -124,25 +124,13 @@
     
     self.bottomLine.hidden = model.isBottomLineHidden;
     
-    if (self.model.isHaveSubTitle) {
-        [self.subTitleLabelBottomConstraint install];
-        [self.contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.right.offset(-16);
-            make.left.equalTo(self.starLabel.mas_right).offset(10);
-            make.height.mas_greaterThanOrEqualTo(26);
-            make.centerY.equalTo(self.contentView);
-        }];
-    }
-    else {
-        [self.subTitleLabelBottomConstraint uninstall];
-        [self.contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.right.offset(-16);
-            make.top.offset(12);
-            make.left.equalTo(self.starLabel.mas_right).offset(10);
-            make.height.mas_greaterThanOrEqualTo(26);
-            make.bottom.offset(-12);
-        }];
-    }
+    [self.contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(-16);
+        make.top.offset(12);
+        make.left.equalTo(self.starLabel.mas_right).offset(10);
+        make.height.mas_greaterThanOrEqualTo(26);
+        make.bottom.offset(-12);
+    }];
     
     if (model.style == JYFormModelCellStyle_SelectShow) {
         model.isSelectable = true;

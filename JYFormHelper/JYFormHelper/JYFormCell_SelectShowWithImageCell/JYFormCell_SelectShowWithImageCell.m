@@ -95,12 +95,6 @@
     if ([JYEasyCodeHelper isNotEmpty:model.placeHolderImage]) {
         [self.selectImage sd_setImageWithURL:[NSURL URLWithString:model.placeHolderImage]];
     }
-    if (self.model.isHaveSubTitle) {
-        [self.subTitleLabelBottomConstraint uninstall];
-    }
-    else {
-        [self.subTitleLabelBottomConstraint uninstall];
-    }
 }
 
 - (UIView *)bottomLine {

@@ -20,8 +20,6 @@ typedef void (^JYFormCell_ReturnBlockVoid)(void);
 @property (nonatomic, copy)JYFormCell_ReturnBlockVoid refreshBlock;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *starLabel;
-@property (nonatomic, strong) UILabel *subTitleLabel;
-@property (nonatomic, strong) MASConstraint *subTitleLabelBottomConstraint;
 
 @end
 

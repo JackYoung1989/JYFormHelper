@@ -244,7 +244,6 @@
         cell.model = self.dataArray[indexPath.row];
         cell.isSwitchOnBlock = ^(BOOL isOn, UISwitch * _Nonnull mySwitch) {
             if (isOn) {//switch选中了
-                
                 JYFormModel *model89 = [[JYFormModel alloc] init];
                 model89.title = @"消息内容";
                 model89.isMust = true;

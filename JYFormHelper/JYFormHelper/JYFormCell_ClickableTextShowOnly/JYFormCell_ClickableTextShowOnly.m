@@ -42,25 +42,14 @@
 - (void)setModel:(JYFormModel *)model {
     [super setModel:model];
     [self setAttributedStringWithModel];
-    if (model.isHaveSubTitle) {
-        [self.subTitleLabelBottomConstraint install];
-        [self.contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.right.offset(-16);
-            make.centerY.equalTo(self.contentView);
-            make.left.equalTo(self.starLabel.mas_right).offset(10);
-            make.height.mas_greaterThanOrEqualTo(26);
-        }];
-    }
-    else {
-        [self.subTitleLabelBottomConstraint uninstall];
-        [self.contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.right.offset(-16);
-            make.top.offset(12);
-            make.left.equalTo(self.starLabel.mas_right).offset(10);
-            make.height.mas_greaterThanOrEqualTo(26);
-            make.bottom.offset(-12);
-        }];
-    }
+    
+    [self.contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(-16);
+        make.top.offset(12);
+        make.left.equalTo(self.starLabel.mas_right).offset(10);
+        make.height.mas_greaterThanOrEqualTo(26);
+        make.bottom.offset(-12);
+    }];
 }
 
 /**

@@ -65,37 +65,13 @@
             }
         }
         
-        if (self.model.isHiddenTitle) {
-            [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.offset(7);
-                make.left.offset(0);
-                make.right.offset(0);
-                make.height.offset(65);
-                make.bottom.offset(-15);
-            }];
-        }
-        else {
-            if (model.isHaveSubTitle) {
-                [self.subTitleLabelBottomConstraint uninstall];
-                [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.equalTo(self.subTitleLabel.mas_bottom).offset(17);
-                    make.left.offset(0);
-                    make.right.offset(0);
-                    make.height.offset(65);
-                    make.bottom.offset(-15);
-                }];
-            }
-            else {
-                [self.subTitleLabelBottomConstraint uninstall];
-                [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.equalTo(self.titleLabel.mas_bottom).offset(17);
-                    make.left.offset(0);
-                    make.right.offset(0);
-                    make.height.offset(65);
-                    make.bottom.offset(-15);
-                }];
-            }
-        }
+        [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.titleLabel.mas_bottom).offset(17);
+            make.left.offset(0);
+            make.right.offset(0);
+            make.height.offset(65);
+            make.bottom.offset(-15);
+        }];
     }
 }
 

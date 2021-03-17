@@ -60,24 +60,12 @@
         }
         self.model.childArray = tempArray;
         
-        if (model.isHaveSubTitle) {
-            [self.subTitleLabelBottomConstraint uninstall];
-            [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.subTitleLabel.mas_bottom).offset(20);
-                make.left.offset(16);
-                make.right.offset(-16);
-                make.bottom.offset(-22);
-            }];
-        }
-        else {
-            [self.subTitleLabelBottomConstraint uninstall];
-            [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.titleLabel.mas_bottom).offset(20);
-                make.left.offset(16);
-                make.right.offset(-16);
-                make.bottom.offset(-22);
-            }];
-        }
+        [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.titleLabel.mas_bottom).offset(20);
+            make.left.offset(16);
+            make.right.offset(-16);
+            make.bottom.offset(-22);
+        }];
         
         [self updateTableViewFrameAndData];
     }

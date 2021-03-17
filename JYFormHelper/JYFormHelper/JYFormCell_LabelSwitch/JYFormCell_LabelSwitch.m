@@ -89,21 +89,11 @@
         self.model.contentString = defaultSelectedModel.itemId;
     }
     
-    if (model.isHaveSubTitle) {
-        [self.subTitleLabelBottomConstraint install];
-        [self.mySwitch mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(self.titleLabel);
-            make.right.offset(-16);
-        }];
-    }
-    else {
-        [self.subTitleLabelBottomConstraint uninstall];
-        [self.mySwitch mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(self.titleLabel);
-            make.bottom.offset(-9);
-            make.right.offset(-16);
-        }];
-    }
+    [self.mySwitch mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.titleLabel);
+        make.bottom.offset(-9);
+        make.right.offset(-16);
+    }];
 }
 
 - (UISwitch *)mySwitch {

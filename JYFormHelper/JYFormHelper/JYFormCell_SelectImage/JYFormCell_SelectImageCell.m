@@ -49,18 +49,9 @@
         self.imageArray = self.model.fileOrImageArray.mutableCopy;
     }
     
-    if (model.isHaveSubTitle) {
-        [self.subTitleLabelBottomConstraint uninstall];
-        [self.collectionView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.subTitleLabel.mas_bottom).offset(12);
-        }];
-    }
-    else {
-        [self.subTitleLabelBottomConstraint uninstall];
-        [self.collectionView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.titleLabel.mas_bottom).offset(12);
-        }];
-    }
+    [self.collectionView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.titleLabel.mas_bottom).offset(12);
+    }];
 }
 
 #pragma mark ====== UICollectionViewDelegate ======
