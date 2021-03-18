@@ -246,14 +246,22 @@
         JYFormModel *model = self.dataArray[i];
         if (model.style == JYFormModelCellStyle_ImageSelect || model.style == JYFormModelCellStyle_FileSelect || model.style == JYFormModelCellStyle_PersonSelect) {
             NSMutableArray *array = [[NSMutableArray alloc] init];
-            NSMutableArray *crossTeamArray = [[NSMutableArray alloc] init];
+            NSMutableArray *tempArray = [[NSMutableArray alloc] init];
             for (JYKeyValueModel *tempModel in model.childArray) {
                 [array addObject:tempModel.itemId];
-                [crossTeamArray addObject:tempModel.tempString];
+                if ([JYEasyCodeHelper isNotEmpty:tempModel.tempString]) {
+                    [tempArray addObject:tempModel.tempString];
+                } else {
+                    [tempArray addObject:@"tempString为空"];
+                }
             }
-            [params setValue:array forKey:model.requestKey];
+            if ([JYEasyCodeHelper isNotEmpty:model.requestKey]) {
+                [params setValue:array forKey:model.requestKey];
+            } else {
+                [params setValue:array forKey:model.title];
+            }
             if (model.ifReturnAllPropertyOfSelectedModel && !kStringIsEmpty(model.identifier4ReturnAllPropertyOfSelectedModel)) {
-                [params setValue:crossTeamArray forKey:model.identifier4ReturnAllPropertyOfSelectedModel];
+                [params setValue:tempArray forKey:model.identifier4ReturnAllPropertyOfSelectedModel];
             }
         } else if (model.style == JYFormModelCellStyle_SelectShow) {
             //如果是单点选择，可能多选，所以先找childArray里面的isSelect的model。
@@ -288,19 +296,18 @@
         } else if (model.style == JYFormModelCellStyle_LabelSwitch) {
             if (model.optionArray.count > 0) {
                 for (JYKeyValueModel *tempModel in model.optionArray) {
-                    if ([tempModel.name isEqualToString:@"on"]) {
-                        [params setValue:@"1" forKey:model.requestKey];
-                    }
-                    else {
-                        [params setValue:@"0" forKey:model.requestKey];
+                    if (tempModel.isSelected && [JYEasyCodeHelper isNotEmpty:tempModel.itemId]) {
+                        [params setValue:tempModel.itemId forKey:model.requestKey];
                     }
                 }
             }
         } else {
-            if (model.requestKey && ![model.requestKey isEqualToString:@""]) {
-                [params setValue:model.contentString forKey:model.requestKey];
-            } else {
-                [params setValue:model.contentString forKey:model.title];
+            if (model.style != JYFormModelCellStyle_GrayBar && model.style != JYFormModelCellStyle_ShowOnly) {
+                if (model.requestKey && ![model.requestKey isEqualToString:@""]) {
+                    [params setValue:model.contentString forKey:model.requestKey];
+                } else {
+                    [params setValue:model.contentString forKey:model.title];
+                }
             }
         }
     }
