@@ -45,7 +45,7 @@
 
 - (void)setModel:(JYFormModel *)model {
     [super setModel:model];
-    if (self.model.fileOrImageArray.count > 0 && !self.isSetDraftFileOrImage) {
+    if (self.model.fileOrImageArray.count > 0 && !self.isSetDraftFileOrImage) {//只赋值一次。
         self.isSetDraftFileOrImage = true;
         self.imageArray = self.model.fileOrImageArray.mutableCopy;
     }
