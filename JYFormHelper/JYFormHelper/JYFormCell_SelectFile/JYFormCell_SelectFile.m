@@ -68,7 +68,12 @@
             make.bottom.offset(-22);
         }];
         
-        [self updateTableViewFrameAndData];
+        [self.tableView reloadData];
+        
+        CGFloat tableViewHeight = self.fileArray.count * (56 + 15) + 60;
+        [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.offset(tableViewHeight);
+        }];
     }
 }
 

@@ -47,7 +47,23 @@
     [super setModel:model];
     if (self.model.fileOrImageArray.count > 0 && !self.isSetDraftFileOrImage) {//只赋值一次。
         self.isSetDraftFileOrImage = true;
-        self.imageArray = self.model.fileOrImageArray.mutableCopy;
+        _imageArray = self.model.fileOrImageArray.mutableCopy;
+        NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+        for (int i = 0; i < _imageArray.count; i ++) {
+            JYFileModel *model = _imageArray[i];
+            //保存model的json字符串，提交数据的时候，直接提交json字符串。
+            JYKeyValueModel *tempModel = [[JYKeyValueModel alloc] init];
+            tempModel.itemId = [NSString jsonStringWithDictionary:[model modelToJSONObject]];
+            [tempArray addObject:tempModel];
+        }
+        self.model.childArray = tempArray;
+        
+        CGFloat collectionViewHeight = (_imageArray.count / 5) * (66 + 10) + (66 + 10) + 10;
+        [self.collectionView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.offset(collectionViewHeight);
+        }];
+        
+        [self.collectionView reloadData];
     }
     
     [self.collectionView mas_updateConstraints:^(MASConstraintMaker *make) {
