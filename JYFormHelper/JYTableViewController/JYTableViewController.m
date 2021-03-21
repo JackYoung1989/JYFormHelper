@@ -13,6 +13,7 @@
 @property (nonatomic, strong)UIImageView *noDataImageView;
 @property (nonatomic, strong)UILabel *noDataTitleLabel;
 @property (nonatomic, strong)UIView *hasNoDataBgView;
+@property (nonatomic, strong)UIButton *sureButton;//确定
 
 @end
 
@@ -90,6 +91,7 @@
 }
 
 - (void)setIsHasSearchBarUpTableView:(BOOL)isHasSearchBarUpTableView {
+    _isHasSearchBarUpTableView = isHasSearchBarUpTableView;
     if (isHasSearchBarUpTableView) {
         /*******      搜索      *******/
         UIView *bgView = [[UIView alloc] init];
@@ -121,8 +123,54 @@
             make.bottom.offset(-kBottomInset);
         }];
     }
+    if (self.isHasSureButtonBelowTableView) {
+        [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.offset(-66 - kBottomInset);
+        }];
+    }
 }
 
+- (void)setIsHasSureButtonBelowTableView:(BOOL)isHasSureButtonBelowTableView {
+    _isHasSureButtonBelowTableView = isHasSureButtonBelowTableView;
+    if (isHasSureButtonBelowTableView) {
+        [self.view addSubview:self.sureButton];
+        self.sureButton.hidden = false;
+        [self.sureButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.offset(15);
+            make.right.offset(-15);
+            make.height.offset(50);
+            make.bottom.offset(-kBottomInset);
+        }];
+        if (self.isHasSearchBarUpTableView) {
+            [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.right.offset(0);
+                make.top.offset(52);
+                make.bottom.offset(-66 - kBottomInset);
+            }];
+        } else {
+            [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.right.offset(0);
+                make.top.offset(0);
+                make.bottom.offset(-66 - kBottomInset);
+            }];
+        }
+    } else {
+        self.sureButton.hidden = true;
+        if (self.isHasSearchBarUpTableView) {
+            [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.right.offset(0);
+                make.top.offset(52);
+                make.bottom.offset(-kBottomInset);
+            }];
+        } else {
+            [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.right.offset(0);
+                make.top.offset(0);
+                make.bottom.offset(-kBottomInset);
+            }];
+        }
+    }
+}
 
 #pragma mark ------------- UITextFieldDelegate -------------------
 - (void)textFieldDidChanged:(UITextField *)textField {
@@ -183,6 +231,13 @@
 
 - (void)reloadData {
     [self.tableView reloadData];
+}
+
+- (void)onSureButtonTouched {
+    if (self.sureButtonTouchedBlock) {
+        self.sureButtonTouchedBlock();
+    }
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 #pragma mark ------------- UITableViewDelegate & DataSource ---------------------------
@@ -249,6 +304,20 @@
         _noDataTitleLabel.font = [UIFont systemFontOfSize:16];
     }
     return _noDataTitleLabel;
+}
+
+- (UIButton *)sureButton {
+    if (!_sureButton) {
+        _sureButton = [[UIButton alloc] init];
+        _sureButton.backgroundColor = [UIColor orangeColor];
+        _sureButton.layer.cornerRadius = 5;
+        _sureButton.clipsToBounds = true;
+        [_sureButton addTarget:self action:@selector(onSureButtonTouched) forControlEvents:UIControlEventTouchUpInside];
+        [_sureButton setTitle:@"确定" forState:UIControlStateNormal];
+        [_sureButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        [_sureButton.titleLabel setFont:[UIFont systemFontOfSize:18]];
+    }
+    return _sureButton;
 }
 
 @end

@@ -9,7 +9,6 @@
 #import "JYFormCell_MultiSelect.h"
 #import "JYSingWordCollectionCell.h"
 #import "JYFormModel.h"
-#import "JYKeyValueModel.h"
 
 @interface JYFormCell_MultiSelect()<UICollectionViewDelegate,UICollectionViewDataSource>
 

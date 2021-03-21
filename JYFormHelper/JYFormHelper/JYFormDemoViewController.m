@@ -8,7 +8,6 @@
 
 #import "JYFormDemoViewController.h"
 #import "JYFormModel.h"
-#import "JYKeyValueModel.h"
 #import "BRDatePickerView.h"
 #import "JYFormCell_LabelSwitch.h"
 #import "JYTestModel.h"
@@ -189,10 +188,13 @@
     model14.isMust = true;
     model14.requestKey = @"";
     NSMutableArray *records = [NSMutableArray arrayWithCapacity:1];
-    for (int i = 0; i < 12; i ++) {
+    for (int i = 0; i < 3; i ++) {
         JYKeyValueModel *keyValuemodel = [[JYKeyValueModel alloc] init];
         keyValuemodel.name = @"杨杰";
-        keyValuemodel.itemId = @"123";
+        keyValuemodel.itemId = @"33333";
+        if (i == 0 || i == 2) {
+            keyValuemodel.itemId = @"3";
+        }
         keyValuemodel.imageUrl = @"";
         [records addObject:keyValuemodel];
     }

@@ -23,6 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign)BOOL isHasSearchBarUpTableView;
 
 /**
+ tableView下面是不是有确定按钮？
+ */
+@property (nonatomic, assign)BOOL isHasSureButtonBelowTableView;
+
+/**
  是不是有上拉刷新
  */
 @property (nonatomic, assign)BOOL isHasFooterRefresh;
@@ -42,6 +47,11 @@ NS_ASSUME_NONNULL_BEGIN
  数据源
  */
 @property (nonatomic, strong) NSMutableArray *dataSource;
+
+/**
+ sureButtonTouchedBlock,是不是点击了“确定”按钮。
+ */
+@property (nonatomic, copy)void(^sureButtonTouchedBlock)(void);
 
 /**
  如果在刷新数据之前想要对dataSource数据源进行处理，可以重写该方法。

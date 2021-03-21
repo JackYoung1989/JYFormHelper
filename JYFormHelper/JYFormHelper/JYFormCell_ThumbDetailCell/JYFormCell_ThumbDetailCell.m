@@ -7,7 +7,6 @@
 //
 
 #import "JYFormCell_ThumbDetailCell.h"
-#import "JYKeyValueModel.h"
 
 @interface JYFormCell_ThumbDetailCell()
 

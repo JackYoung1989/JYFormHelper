@@ -8,6 +8,7 @@
 
 #import "JYFormCell_SelectPerson.h"
 #import "JYFormCell_SelectPersonInnerCell.h"
+#import "JYTableViewControllerDemo.h"
 
 #define kMaxCountShow  5  //一行中最多显示的人员cell个数
 
@@ -125,6 +126,27 @@
     if ((indexPath.row == self.personsArray.count && self.personsArray.count < kMaxCountShow) || (indexPath.row == kMaxCountShow && self.personsArray.count >= kMaxCountShow)) {
         //点击了+号
         if (self.model.selectPersonStyle == JYFormModelCellSelectPersonStyle_MultiTeamMultiSelect) {
+            JYTableViewControllerDemo *selectPerson = [[JYTableViewControllerDemo alloc] init];
+            selectPerson.selectedArray = self.personsArray;
+            weakSelf(self)
+            selectPerson.selectedItemsArrayBlock = ^(NSArray<JYFormCell_SelectPersonModel *> * _Nonnull keyValueArray) {
+                [weakSelf.personsArray removeAllObjects];
+                [weakSelf.personsArray addObjectsFromArray:[NSArray modelArrayWithClass:[JYFormCell_SelectPersonModel class] json:keyValueArray.modelToJSONObject]];
+                NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+                for (JYFormCell_SelectPersonModel *model in self.personsArray) {
+                    JYKeyValueModel *childModel = [[JYKeyValueModel alloc] init];
+                    childModel.itemId = model.userId;
+                    childModel.name = model.userName;
+                    if (self.model.ifReturnAllPropertyOfSelectedModel) {
+                        childModel.tempString = model.modelToJSONString;
+                    }
+                    [tempArray addObject:childModel];
+                }
+                weakSelf.model.childArray = tempArray;
+                [weakSelf.collectionView reloadData];
+            };
+            [self.viewController.navigationController pushViewController:selectPerson animated:true];
+            
 //            MultSelectMembersViewController *SelectMembersVC = [[MultSelectMembersViewController alloc] init];
 //            SelectMembersVC.bMultiple = YES;
 //
@@ -152,6 +174,8 @@
 //                [weakSelf.collectionView reloadData];
 //            };
 //            [self.viewController.navigationController pushViewController:SelectMembersVC animated:true];
+            
+            
         } else if (self.model.selectPersonStyle == JYFormModelCellSelectPersonStyle_SpecifiedSingleTeamMultiSelect) {
         } else {
         }
