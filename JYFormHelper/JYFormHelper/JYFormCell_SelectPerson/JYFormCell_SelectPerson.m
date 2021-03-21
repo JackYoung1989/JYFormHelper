@@ -56,14 +56,7 @@
         //如果默认一个已经被选择了，那么需要在这里添加上数据。
         self.descLabel.text = model.descString;
         if (model.childArray.count > 0) {
-            for (int i = 0; i < model.childArray.count; i ++) {
-                JYKeyValueModel *keyValueModel = model.childArray[i];
-                JYFormCell_SelectPersonModel *personModel = [[JYFormCell_SelectPersonModel alloc] init];
-                personModel.employeeName = keyValueModel.name;
-                personModel.userId = keyValueModel.itemId;
-                personModel.userHeadUrl = keyValueModel.imageUrl;
-                [self.personsArray addObject:personModel];
-            }
+            self.personsArray = [NSMutableArray arrayWithArray:model.childArray];
         }
         
         [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -129,53 +122,21 @@
             JYTableViewControllerDemo *selectPerson = [[JYTableViewControllerDemo alloc] init];
             selectPerson.selectedArray = self.personsArray;
             weakSelf(self)
-            selectPerson.selectedItemsArrayBlock = ^(NSArray<JYFormCell_SelectPersonModel *> * _Nonnull keyValueArray) {
+            selectPerson.selectedItemsArrayBlock = ^(NSArray<JYKeyValueModel *> * _Nonnull keyValueArray) {
                 [weakSelf.personsArray removeAllObjects];
-                [weakSelf.personsArray addObjectsFromArray:[NSArray modelArrayWithClass:[JYFormCell_SelectPersonModel class] json:keyValueArray.modelToJSONObject]];
+                [weakSelf.personsArray addObjectsFromArray:keyValueArray];
                 NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-                for (JYFormCell_SelectPersonModel *model in self.personsArray) {
-                    JYKeyValueModel *childModel = [[JYKeyValueModel alloc] init];
-                    childModel.itemId = model.userId;
-                    childModel.name = model.userName;
+                for (JYKeyValueModel *model in self.personsArray) {
                     if (self.model.ifReturnAllPropertyOfSelectedModel) {
-                        childModel.tempString = model.modelToJSONString;
+                        //这个地方需要进行处理，如果需要返回所有数据的时候，在这里处理。
+                        model.tempString = model.modelToJSONString;
                     }
-                    [tempArray addObject:childModel];
+                    [tempArray addObject:model];
                 }
                 weakSelf.model.childArray = tempArray;
                 [weakSelf.collectionView reloadData];
             };
             [self.viewController.navigationController pushViewController:selectPerson animated:true];
-            
-//            MultSelectMembersViewController *SelectMembersVC = [[MultSelectMembersViewController alloc] init];
-//            SelectMembersVC.bMultiple = YES;
-//
-//            NSMutableArray *tempArray = [NSMutableArray array];
-//            for (JYFormCell_SelectPersonModel *personModel in self.personsArray) {
-//                [tempArray addObject:[NSNumber numberWithString:personModel.userId]];
-//            }
-//            SelectMembersVC.selectArray = tempArray;
-//            weakSelf(self)
-//            SelectMembersVC.SelectMembersBlock = ^(NSArray * _Nonnull members) {
-//                NSLog(@"________%@",members);
-//                [weakSelf.personsArray removeAllObjects];
-//                [weakSelf.personsArray addObjectsFromArray:[NSArray modelArrayWithClass:[JYFormCell_SelectPersonModel class] json:members.modelToJSONObject]];
-//                NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-//                for (JYFormCell_SelectPersonModel *model in self.personsArray) {
-//                    JYKeyValueModel *childModel = [[JYKeyValueModel alloc] init];
-//                    childModel.itemId = model.userId;
-//                    childModel.name = model.userName;
-//                    if (self.model.ifReturnAllPropertyOfSelectedModel) {
-//                        childModel.tempString = model.modelToJSONString;
-//                    }
-//                    [tempArray addObject:childModel];
-//                }
-//                weakSelf.model.childArray = tempArray;
-//                [weakSelf.collectionView reloadData];
-//            };
-//            [self.viewController.navigationController pushViewController:SelectMembersVC animated:true];
-            
-            
         } else if (self.model.selectPersonStyle == JYFormModelCellSelectPersonStyle_SpecifiedSingleTeamMultiSelect) {
         } else {
         }

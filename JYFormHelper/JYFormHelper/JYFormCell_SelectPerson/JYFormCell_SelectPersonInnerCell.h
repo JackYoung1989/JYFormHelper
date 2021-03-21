@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JYFormCell_SelectPersonModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,7 +21,7 @@ typedef NS_ENUM(NSUInteger, JYFormCell_SelectPersonInnerCellType) {
 @interface JYFormCell_SelectPersonInnerCell : UICollectionViewCell
 
 @property (nonatomic, assign)JYFormCell_SelectPersonInnerCellType cellType;
-@property (nonatomic, strong)JYFormCell_SelectPersonModel *personModel;
+@property (nonatomic, strong)JYKeyValueModel *personModel;
 @property (nonatomic, copy)DeleteItemWithIndexBlockType deleteItemWithIndexBlock;
 @property (nonatomic, assign)NSInteger itemIndex;
 @property (nonatomic, assign)NSInteger totalCount;//一共多少人，用于显示总人数

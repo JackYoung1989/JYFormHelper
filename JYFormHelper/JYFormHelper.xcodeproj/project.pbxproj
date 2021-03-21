@@ -28,7 +28,6 @@
 		F23116C626004E25009A1541 /* JYFormCell_SectionHeaderTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F231168826004E25009A1541 /* JYFormCell_SectionHeaderTitleLabel.m */; };
 		F23116C726004E25009A1541 /* JYFormCell_ClickableTextShowOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = F231168A26004E25009A1541 /* JYFormCell_ClickableTextShowOnly.m */; };
 		F23116C826004E25009A1541 /* JYFormCell_SelectPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F231169126004E25009A1541 /* JYFormCell_SelectPerson.m */; };
-		F23116C926004E25009A1541 /* JYFormCell_SelectPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F231169226004E25009A1541 /* JYFormCell_SelectPersonModel.m */; };
 		F23116CA26004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode.m in Sources */ = {isa = PBXBuildFile; fileRef = F231169426004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode.m */; };
 		F23116CB26004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode_InnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F231169526004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode_InnerCell.m */; };
 		F23116CC26004E25009A1541 /* JYFormCell_SelectPersonInnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F231169826004E25009A1541 /* JYFormCell_SelectPersonInnerCell.m */; };
@@ -99,10 +98,8 @@
 		F231168B26004E25009A1541 /* JYFormCell_LabelSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormCell_LabelSwitch.h; sourceTree = "<group>"; };
 		F231168C26004E25009A1541 /* JYFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormModel.h; sourceTree = "<group>"; };
 		F231168E26004E25009A1541 /* JYFormCell_SelectPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormCell_SelectPerson.h; sourceTree = "<group>"; };
-		F231168F26004E25009A1541 /* JYFormCell_SelectPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormCell_SelectPersonModel.h; sourceTree = "<group>"; };
 		F231169026004E25009A1541 /* JYFormCell_SelectPersonInnerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormCell_SelectPersonInnerCell.h; sourceTree = "<group>"; };
 		F231169126004E25009A1541 /* JYFormCell_SelectPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_SelectPerson.m; sourceTree = "<group>"; };
-		F231169226004E25009A1541 /* JYFormCell_SelectPersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_SelectPersonModel.m; sourceTree = "<group>"; };
 		F231169426004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_SelectPersonDetailShowMode.m; sourceTree = "<group>"; };
 		F231169526004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode_InnerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYFormCell_SelectPersonDetailShowMode_InnerCell.m; sourceTree = "<group>"; };
 		F231169626004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYFormCell_SelectPersonDetailShowMode.h; sourceTree = "<group>"; };
@@ -255,8 +252,6 @@
 			children = (
 				F231168E26004E25009A1541 /* JYFormCell_SelectPerson.h */,
 				F231169126004E25009A1541 /* JYFormCell_SelectPerson.m */,
-				F231168F26004E25009A1541 /* JYFormCell_SelectPersonModel.h */,
-				F231169226004E25009A1541 /* JYFormCell_SelectPersonModel.m */,
 				F231169026004E25009A1541 /* JYFormCell_SelectPersonInnerCell.h */,
 				F231169826004E25009A1541 /* JYFormCell_SelectPersonInnerCell.m */,
 				F231169326004E25009A1541 /* JYFormCell_SelectPersonDetailShowMode */,
@@ -624,7 +619,6 @@
 				F231170A2606EC6E009A1541 /* JYTableViewController.m in Sources */,
 				F2FEB27F25FF55F4002F5B5B /* JYPersonModel.m in Sources */,
 				F23116C326004E25009A1541 /* JYFormCell_SelectFileCell.m in Sources */,
-				F23116C926004E25009A1541 /* JYFormCell_SelectPersonModel.m in Sources */,
 				F23116BD26004E25009A1541 /* JYFormCell_MultiSelect.m in Sources */,
 				F23116C626004E25009A1541 /* JYFormCell_SectionHeaderTitleLabel.m in Sources */,
 				F23116BA26004E25009A1541 /* JYFormCell_LabelSwitch.m in Sources */,

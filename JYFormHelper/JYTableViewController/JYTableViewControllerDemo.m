@@ -8,7 +8,6 @@
 
 #import "JYTableViewControllerDemo.h"
 #import "JYPersonSelectCell.h"
-#import "JYFormCell_SelectPersonModel.h"
 
 //展示     
 @interface JYTableViewControllerDemo ()
@@ -25,7 +24,7 @@
     self.title = @"选择人员";
     self.outOfScopeArray = [[NSMutableArray alloc] init];
     
-    NSString *personString = @"[{\"name\":\"JackYoung1\", \"id\":\"11111\", \"userPhone\":\"11111111111\"},{\"name\":\"JackYoung2\", \"id\":\"22222\", \"userPhone\":\"22222222222\"},{\"name\":\"JackYoung3\", \"id\":\"33333\", \"userPhone\":\"333333333\"},{\"name\":\"JackYoung4\", \"id\":\"44444\", \"userPhone\":\"444444444\"},{\"name\":\"JackYoung5\", \"id\":\"55555\", \"userPhone\":\"555555555\"}]";
+    NSString *personString = @"[{\"name\":\"Jack1\", \"id\":\"11111\", \"userPhone\":\"11111111111\"},{\"name\":\"Jack2\", \"id\":\"22222\", \"userPhone\":\"22222222222\"},{\"name\":\"Jack3\", \"id\":\"33333\", \"userPhone\":\"333333333\"},{\"name\":\"Jack4\", \"id\":\"44444\", \"userPhone\":\"444444444\"},{\"name\":\"Jack5\", \"id\":\"55555\", \"userPhone\":\"555555555\"}]";
     NSArray *personsArray = [NSArray modelArrayWithClass:[JYKeyValueModel class] json:personString];
     self.dataSource = [NSMutableArray arrayWithArray:personsArray];
     
@@ -45,10 +44,7 @@
             for (int i = 0; i < weakSelf.dataSource.count; i ++) {
                 JYKeyValueModel *model = weakSelf.dataSource[i];
                 if (model.isSelected) {
-                    JYFormCell_SelectPersonModel *tempModel = [[JYFormCell_SelectPersonModel alloc] init];
-                    tempModel.userId = model.itemId;
-                    tempModel.userName = model.name;
-                    [resultArray addObject:tempModel];
+                    [resultArray addObject:model];
                 }
             }
             
@@ -59,11 +55,11 @@
     //默认已经选中的cell
     if (self.selectedArray.count > 0) {
         for (int j = 0; j < self.selectedArray.count; j ++) {
-            JYFormCell_SelectPersonModel *tempModel = self.selectedArray[j];
+            JYKeyValueModel *tempModel = self.selectedArray[j];
             BOOL matched = false;
             for (int i = 0; i < self.dataSource.count; i ++) {
                 JYKeyValueModel *model = self.dataSource[i];
-                if ([tempModel.userId isEqualToString:model.itemId]) {
+                if ([tempModel.itemId isEqualToString:model.itemId]) {
                     model.isSelected = true;
                     matched = true;
                     break;

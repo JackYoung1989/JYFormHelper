@@ -67,13 +67,13 @@
     return self;
 }
 
-- (void)setPersonModel:(JYFormCell_SelectPersonModel *)personModel {
-    self.nameLabel.text = kStringIsEmpty(personModel.userName) ? personModel.employeeName : personModel.userName;
+- (void)setPersonModel:(JYKeyValueModel *)personModel {
+    self.nameLabel.text = kStringIsEmpty(personModel.name) ? @"--" : personModel.name;
     if (self.cellType == JYFormCell_SelectPersonInnerCellTypeMore) {
         [self.imageView setImage:[UIImage imageWithColor:[UIColor darkGrayColor]]];
         self.nameLabel.text = @"更多";
     } else {
-        [self.imageView sd_setImageWithURL:[NSURL URLWithString:personModel.userHeadUrl] placeholderImage:AvatorPlaceHolderImge];
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:personModel.imageUrl] placeholderImage:AvatorPlaceHolderImge];
     }
 }
 
