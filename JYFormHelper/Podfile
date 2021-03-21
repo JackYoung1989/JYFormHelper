@@ -15,5 +15,6 @@ target 'JYFormHelper' do
    pod 'SVProgressHUD'
    pod 'SDWebImage', '5.3.1'
    pod 'TZImagePickerController'
+   pod 'MJRefresh'
    
 end
