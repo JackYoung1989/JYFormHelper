@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy)void(^selectedItemsArrayBlock)(NSArray <JYKeyValueModel *>*keyValueArray);
 
+@property (nonatomic, assign)BOOL ifReturnAllPropertyOfSelectedModel;
+
 @end
 
 NS_ASSUME_NONNULL_END

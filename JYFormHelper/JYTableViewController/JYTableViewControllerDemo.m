@@ -26,6 +26,13 @@
     
     NSString *personString = @"[{\"name\":\"Jack1\", \"id\":\"11111\", \"userPhone\":\"11111111111\"},{\"name\":\"Jack2\", \"id\":\"22222\", \"userPhone\":\"22222222222\"},{\"name\":\"Jack3\", \"id\":\"33333\", \"userPhone\":\"333333333\"},{\"name\":\"Jack4\", \"id\":\"44444\", \"userPhone\":\"444444444\"},{\"name\":\"Jack5\", \"id\":\"55555\", \"userPhone\":\"555555555\"}]";
     NSArray *personsArray = [NSArray modelArrayWithClass:[JYKeyValueModel class] json:personString];
+    //在这里，上面的数据是假设从网络上下载的数据，可能是别的model，JYKeyValueModel.tempString保存该model的所有数据。防止后台需要更多model数据。
+    if (self.ifReturnAllPropertyOfSelectedModel) {
+        for (int i = 0; i < personsArray.count; i ++) {
+            JYKeyValueModel *model = personsArray[i];
+            model.tempString = model.modelToJSONString;
+        }
+    }
     self.dataSource = [NSMutableArray arrayWithArray:personsArray];
     
     self.isHasHeaderRefresh = false;

@@ -196,12 +196,14 @@
             keyValuemodel.itemId = @"3";
         }
         keyValuemodel.imageUrl = @"";
+        keyValuemodel.tempString = @"originalData";
         [records addObject:keyValuemodel];
     }
     if (records.count > 0) {
         model14.childArray = [records copy];
     }
-    
+    model14.ifReturnAllPropertyOfSelectedModel = true;
+    model14.identifier4ReturnAllPropertyOfSelectedModel = @"JackYoung'sAllData";
     model14.style = JYFormModelCellStyle_PersonSelect;
     [self.dataArray addObject:model14];
     

@@ -121,16 +121,17 @@
         if (self.model.selectPersonStyle == JYFormModelCellSelectPersonStyle_MultiTeamMultiSelect) {
             JYTableViewControllerDemo *selectPerson = [[JYTableViewControllerDemo alloc] init];
             selectPerson.selectedArray = self.personsArray;
+            selectPerson.ifReturnAllPropertyOfSelectedModel = self.model.ifReturnAllPropertyOfSelectedModel;
             weakSelf(self)
             selectPerson.selectedItemsArrayBlock = ^(NSArray<JYKeyValueModel *> * _Nonnull keyValueArray) {
                 [weakSelf.personsArray removeAllObjects];
                 [weakSelf.personsArray addObjectsFromArray:keyValueArray];
                 NSMutableArray *tempArray = [[NSMutableArray alloc] init];
                 for (JYKeyValueModel *model in self.personsArray) {
-                    if (self.model.ifReturnAllPropertyOfSelectedModel) {
-                        //这个地方需要进行处理，如果需要返回所有数据的时候，在这里处理。
-                        model.tempString = model.modelToJSONString;
-                    }
+//                    if (self.model.ifReturnAllPropertyOfSelectedModel) {
+//                        //这个地方需要进行处理，如果需要返回所有数据的时候，在这里处理。
+//                        model.tempString = model.modelToJSONString;
+//                    }
                     [tempArray addObject:model];
                 }
                 weakSelf.model.childArray = tempArray;
