@@ -23,6 +23,7 @@
 #import "NSString+Additions.h"
 #import "JYPersonModel.h"
 #import "JYFileModel.h"
+#import <MJRefresh.h>
 
 #define kSCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define kSCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height

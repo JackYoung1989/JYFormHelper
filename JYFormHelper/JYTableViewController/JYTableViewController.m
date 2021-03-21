@@ -1,9 +1,9 @@
 //
 //  JYTableViewController.m
-//  Ccreate_iOS
+//  JackYoung
 //
 //  Created by JackYoung on 2021/2/13.
-//  Copyright © 2021 yunchuang. All rights reserved.
+//  Copyright © 2021 JackYoung's. All rights reserved.
 //
 
 #import "JYTableViewController.h"
@@ -94,7 +94,7 @@
         /*******      搜索      *******/
         UIView *bgView = [[UIView alloc] init];
         [self.view addSubview:bgView];
-        bgView.backgroundColor = kColor_WcFFFFFF();
+        bgView.backgroundColor = [UIColor whiteColor];
         [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.offset(0);
             make.left.right.offset(0);
@@ -224,9 +224,9 @@
         _searchTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _searchTextField.enablesReturnKeyAutomatically = YES;
         _searchTextField.leftViewMode = UITextFieldViewModeAlways;
-        _searchTextField.font = kFont_PingFangSCRegular(14);
+        _searchTextField.font = [UIFont systemFontOfSize:14];
         _searchTextField.layer.cornerRadius = 9.0;
-        _searchTextField.backgroundColor = kColor_WcF4F5F6();
+        _searchTextField.backgroundColor = [UIColor colorWithHexString:@"#F4F5F6"];
         _searchTextField.delegate = self;
     }
     return _searchTextField;
@@ -245,8 +245,8 @@
         _noDataTitleLabel = [[UILabel alloc] init];
         _noDataTitleLabel.text = @"暂无数据";
         _noDataTitleLabel.textAlignment = NSTextAlignmentCenter;
-        _noDataTitleLabel.textColor = KFontColor_blackThird;
-        _noDataTitleLabel.font = kFont_PingFangSCRegular(16);
+        _noDataTitleLabel.textColor = [UIColor darkGrayColor];
+        _noDataTitleLabel.font = [UIFont systemFontOfSize:16];
     }
     return _noDataTitleLabel;
 }

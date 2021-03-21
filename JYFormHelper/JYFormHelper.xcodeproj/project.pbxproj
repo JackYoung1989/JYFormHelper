@@ -43,6 +43,7 @@
 		F23116FD2601A57A009A1541 /* JYTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F23116FC2601A57A009A1541 /* JYTestModel.m */; };
 		F23117092606EC6E009A1541 /* JYTableViewControllerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F23117052606EC6D009A1541 /* JYTableViewControllerDemo.m */; };
 		F231170A2606EC6E009A1541 /* JYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23117082606EC6D009A1541 /* JYTableViewController.m */; };
+		F231172A2606F4DF009A1541 /* JYPersonSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F23117292606F4DF009A1541 /* JYPersonSelectCell.m */; };
 		F239B42225C65D1200DBB138 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B42125C65D1200DBB138 /* AppDelegate.m */; };
 		F239B42825C65D1200DBB138 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F239B42725C65D1200DBB138 /* ViewController.m */; };
 		F239B42B25C65D1200DBB138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F239B42925C65D1200DBB138 /* Main.storyboard */; };
@@ -130,6 +131,8 @@
 		F23117062606EC6D009A1541 /* JYTableViewControllerDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTableViewControllerDemo.h; sourceTree = "<group>"; };
 		F23117072606EC6D009A1541 /* JYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTableViewController.h; sourceTree = "<group>"; };
 		F23117082606EC6D009A1541 /* JYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTableViewController.m; sourceTree = "<group>"; };
+		F23117282606F4DF009A1541 /* JYPersonSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPersonSelectCell.h; sourceTree = "<group>"; };
+		F23117292606F4DF009A1541 /* JYPersonSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPersonSelectCell.m; sourceTree = "<group>"; };
 		F239B41D25C65D1200DBB138 /* JYFormHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYFormHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F239B42025C65D1200DBB138 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F239B42125C65D1200DBB138 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -436,6 +439,8 @@
 				F23117082606EC6D009A1541 /* JYTableViewController.m */,
 				F23117062606EC6D009A1541 /* JYTableViewControllerDemo.h */,
 				F23117052606EC6D009A1541 /* JYTableViewControllerDemo.m */,
+				F23117282606F4DF009A1541 /* JYPersonSelectCell.h */,
+				F23117292606F4DF009A1541 /* JYPersonSelectCell.m */,
 			);
 			path = JYTableViewController;
 			sourceTree = "<group>";
@@ -641,6 +646,7 @@
 				F239B43325C65D1400DBB138 /* main.m in Sources */,
 				F239B45B25C67CC200DBB138 /* JYEasyCodeHelper.m in Sources */,
 				F2FEB27825FF102B002F5B5B /* NSString+Additions.m in Sources */,
+				F231172A2606F4DF009A1541 /* JYPersonSelectCell.m in Sources */,
 				F23116D226004E25009A1541 /* JYFormCell_SelectImageCell.m in Sources */,
 				F23116C226004E25009A1541 /* JYFormCell_SelectFileAddCell.m in Sources */,
 			);

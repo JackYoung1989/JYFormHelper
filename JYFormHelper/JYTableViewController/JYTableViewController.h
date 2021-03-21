@@ -1,9 +1,9 @@
 //
 //  JYTableViewController.h
-//  Ccreate_iOS
+//  JackYoung
 //
 //  Created by JackYoung on 2021/2/13.
-//  Copyright © 2021 yunchuang. All rights reserved.
+//  Copyright © 2021 JackYoung's. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
