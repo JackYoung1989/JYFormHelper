@@ -334,15 +334,6 @@
 
 #pragma mark -------------- UITableViewDelegate & dataSource --------------------
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    JYFormModel *model = self.dataArray[indexPath.row];
-    if (model.isHiddenCell) {
-        return 0;
-    }
-    return UITableViewAutomaticDimension;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
