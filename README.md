@@ -5,7 +5,8 @@
 * 1.只需要继承JYFormViewController类；
 * 2.完成该- (void)configFormView 方法实现。
 * 3.组装不同的JYFormModel，每一个JYFormModel就是一行表单的行，如下，
-    `JYFormModel *model8 = [[JYFormModel alloc] init];
+    ```Objective-C
+    JYFormModel *model8 = [[JYFormModel alloc] init];
     model8.title = @"可以输入";
     model8.requestKey = @"";
     model8.placeHolder = @"Jack is a good boy";
@@ -14,7 +15,8 @@
     }
     model8.style = JYFormModelCellStyle_InputTextField;
     model8.inputMaxLength = 5;
-    [self.dataArray addObject:model8];`
+    [self.dataArray addObject:model8];
+    ```
     
     通过修改title属性，可以修改显示的标题名字；requstKey修改对应后台的请求参数；placeHolder是占位符可自定义；
     如果网络上下来的数据需要填充，那么直接给contentString赋值，内容就会显示在表单之上；
